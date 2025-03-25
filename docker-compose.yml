@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  backend:
+    build: ./nest
+    ports: 
+      - "3000:3000"
+    volumes:
+      - ./nest:/webapp-EnternalZen-nexus: source=bind, target=/webapp-EternalZen-nexus
+    environment:
+      NODE_ENV: development
+  frontend:
+    build: ./frontend
+    ports:
+      - "3001:80"
+    volumes:
+      - ./frontend:/webapp-EternalZen-nexus:source=bind, target=/webapp-EternalZen-nexus
+      - frontend_node_modules:/webapp-nternalZen-nexus
+      - frontend_build:/webapp-EternalZen-nexus/build
+    depends_on:
+      - backend
+    environment:
+      NODE_ENV: development
+      REACT_APP_API_URL: "http://localhost:3000"
+volumes:
+  backend_node_modules:
+  frontend_node_modules:
+  frontend_build: 
