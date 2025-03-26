@@ -4,7 +4,7 @@
 FROM node:20-lts-alpine AS builder
 
 #   Working directory in the container
-WORKDIR /app
+WORKDIR /webapp-EternalZen-nexus
 
 #   Copy package.json and package-lock.json
 COPY package*.json ./
@@ -22,7 +22,7 @@ RUN npm run build
 FROM nginx:stable-alpine
 
 #   Copies the react files into Nignx's web server directory
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=builder /webapp-EternalZen-nexus/build /usr/share/nginx/html
 
 #   Expose the application port ( NGINX)
 EXPOSE 80
