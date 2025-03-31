@@ -9,9 +9,6 @@ import Footer from './page-footer.jsx'
 import MainSection from './page-main.jsx'
 
 
-
-
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <header>
