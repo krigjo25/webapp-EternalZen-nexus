@@ -15,13 +15,13 @@ A preview of the project can be accessed at [Screen Dump](/lib/documents/spiritu
 git clone https://github.com/krigjo25/webapp-GrowthJournal-nestJ.git
 
 #   Using SSH
-ssh git@github.com:krigjo25/webapp-GrowthJournal-nestJS.git
+ssh git@github.com:krigjo25/webapp-GrowthJournal-nexus.git
 
 #   Using Github CLI
-gh repo clone krigjo25/webapp-GrowthJournal-nestJ
+gh repo clone krigjo25/webapp-GrowthJournal-nexus
 ```
 
 2. Navigate to the project directory using terminal
 ```sh
-cd webapp-GrowthJournal-nestJ
+cd webapp-GrowthJournal-nexus
 ```
