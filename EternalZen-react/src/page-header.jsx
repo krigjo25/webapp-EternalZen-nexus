@@ -9,27 +9,26 @@ import EternalZenLogo from '/vite.svg'
 
 //  Importing components
 import Main from './page-main'
-
+import Navigation from './navigation.jsx'
 
 function header()
 {
+    const buttons =[
+            {
+                name: "About us & our philiosophy",
+                function:aboutUs
+
+            },
+            {
+                name: "What is Spirituality",
+                function: spirituality
+
+            },
+        ]
     return (
     <>
-        <h1>EternalZen - Logo</h1>
-        <nav>
-            <button onClick={aboutUs}>About EternalZen</button>
-            <button onClick={spirituality}>What is Spirituality</button>
-            <button onClick={meditation}>What is meditation</button>
-            <button onClick={affirmation}>What is Affirmation</button>
-            <button onClick={login}>Login</button>
-            <div className='btn'>
-                <a href=''> David R. Hawkings Calibrations of consiousness</a>
-            </div>
-                    
-            <div className= 'btn'>
-                <a href=''> Register </a>
-            </div>
-        </nav>
+            <h1>EternalZen - Logo</h1>
+            <Navigation data={buttons}/>
 
     </>
     )
