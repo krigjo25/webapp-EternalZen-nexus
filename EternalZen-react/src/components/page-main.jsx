@@ -1,19 +1,14 @@
 //  EternalZen Main content
 //  Importing dependencies
 
-function main(props)
+export default function article({data})
 {
 
     //  Initializing data
-    const text = props.parentData;
-    console.log(props.parentData);
+    console.log(data);
     return (
-        <main>
             <article className='flex-wrap-row'>
+                {data && <h2>{data.headline}</h2>}
             </article>
-        </main>
     );
 }
-
-
-export default main

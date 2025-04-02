@@ -2,35 +2,74 @@
 //  Importing dependencies
 import { useState } from 'react'
 
-
-//  Importing Logo
-import EternalZenLogo from '/vite.svg'
-
-
 //  Importing components
-import Main from './page-main'
-import Navigation from './navigation.jsx'
+import Main from './page-main.jsx';
+import Image from './misc/image.jsx';
+import Navigation from './navigation/navigation.jsx';
 
 function header()
 {
     const buttons =[
             {
-                name: "About us & our philiosophy",
-                function:aboutUs
+                id : 0,
+                exists: true,
+                func : aboutUs,
+                name : "About us & our philiosophy",
+                
 
             },
             {
+                id : 1,
+                exists: true,
+                func : spirituality,
                 name: "What is Spirituality",
-                function: spirituality
-
             },
-        ]
-    return (
-    <>
-            <h1>EternalZen - Logo</h1>
-            <Navigation data={buttons}/>
+            {
+                id : 2,
+                exists: true,
+                func : meditation,
+                name: "What is Meditation",
+            },
+            {
+                id : 3,
+                exists: true,
+                func : affirmation,
+                name: "What is Affirmations",
+            },
+            {
+                id : 4,
+                exists: true,
+                func : login,
+                name: "Login",
+                
+            },
+        ];
 
-    </>
+    const links = [
+        {
+            id : 0,
+            external : false,
+            name: 'David R. Hawkings\'s Calibrations of consiousness',
+            link: '',
+        },
+        {
+            id : 1,
+            external : false,
+            name : 'Register',
+            link : '',
+        },
+        ];
+    const image = 
+    {
+        src:'',
+        alt:'EternalZenLogo.svg',
+    }
+    return (
+        <>
+            <Image src = {image.src} alt = {image.alt} />
+            <h1>EternalZen - Logo</h1>
+            <Navigation buttons={buttons} links={links}/>
+        </>
     )
 }
 
@@ -87,7 +126,7 @@ function aboutUs()
             vel libero a, tincidunt posuere neque. Proin sodales a nulla quis vehicula.`,
     }
 
-    return ;
+    return <Main data = {data} />;
 }
 
 function spirituality()

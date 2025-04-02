@@ -1,11 +1,11 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
 
 //  Importing components
-import Header from './page-header.jsx'
-import Footer from './page-footer.jsx'
-import MainSection from './page-main.jsx'
+import Header from './components/page-header.jsx';
+import Footer from './components/page-footer.jsx';
+import MainSection from './components/page-main.jsx';
 
 
 createRoot(document.getElementById('root')).render(
