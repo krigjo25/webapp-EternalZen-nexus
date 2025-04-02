@@ -4,15 +4,23 @@
 import Btn from '../misc/btn.jsx'
 import Link from './links.jsx'
 
-export default function Navigation({buttons, links})
+export default function Navigation({arg, links})
 {
+    const zero = 0;
     return (
-    <nav>
-        {buttons && buttons.map((button) => (
-            <Btn key = {button.id} btn = {button} />))}
+    <>
 
-        {links && links.map((link) => (
-            <Link key = {link.id} link = {link} />))}
-    </nav>
+        {arg && arg.length > zero }
+            <nav>
+                {arg && arg.map((object) => <Btn key = {object.id} btn = {object} />)}
+            </nav>
+
+        
+            {links && links.length > zero }
+                <nav>
+                    {links.map((link) => <Link key = {link.id} link = {link} />)}
+                </nav>
+
+    </>
     );
 }
