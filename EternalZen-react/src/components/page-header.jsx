@@ -7,76 +7,77 @@ import Article from './page-main.jsx';
 import Image from './misc/image.jsx';
 import Navigation from './navigation/navigation.jsx';
 
-function header({ data })
+function headerData({ data })
 {
-    const buttons =[
-            {
-                id : 0,
-                exists: true,
-                func : aboutUs,
-                name : "About us & our philiosophy",
-                
-
-            },
-            {
-                id : 1,
-                exists: true,
-                func : spirituality,
-                name: "What is Spirituality",
-            },
-            {
-                id : 2,
-                exists: true,
-                func : meditation,
-                name: "What is Meditation",
-            },
-            {
-                id : 3,
-                exists: true,
-                func : affirmation,
-                name: "What is Affirmations",
-            },
-        ];
-
-    const links = [
+    //  Initalizing buttons, links & images
+    const auth = [
         {
             id : 0,
+            
+            func : login,
+            name: 'Login',
+            type: 'button',
+            
+        },
+        {
+            id : 1,
+            type: 'link',
+            name: "register",
+            link:"register page",
+        },
+
+    ];
+
+    const headerNav =[
+        {
+            id : 0,
+            type: "button",
+            func : aboutUs,
+            name : "About us & our philiosophy",
+        },
+        {
+            id : 1,
+            type: "button",
+            func : spirituality,
+            name: "What is Spirituality",
+        },
+        {
+            id : 2,
+            type: "button",
+            func : meditation,
+            name: "What is Meditation",
+        },
+        {
+            id : 3,
+            type: "button",
+            func : affirmation,
+            name: "What is Affirmations",
+        },
+        {
+            id : 4,
+            type: "link",
             external : false,
             name: 'David R. Hawkings\'s Calibrations of consiousness',
             link: '',
         },
-        {
-            id : 1,
-            external : false,
-            name : 'Register',
-            link : '',
-        },
-        ];
-    const image = 
+    ];
+
+    const logo = 
     {
         src:'EternalZenLogo.svg',
         alt:'EternalZenLogo.svg',
     }
-    const auth = [
-        {
-            id : 0,
-            func : login,
-            name: "Login",
-            
-        },
-        {
-            id : 1,
-            link:"register page",
-            name: "register",
-            
-        },
-
-    ]
+    
     return (
         <>
-            <Image src = {image.src} alt = {image.alt} />
-            <h1>EternalZen - Logo</h1>
-            <Navigation arg = {buttons} links={links}/>
+            <div className='top flex-wrap-row-justify-center'> 
+                <Image src = {logo.src} alt = {logo.alt} />
+                <h1>EternalZen - Logo</h1>
+                <Navigation arg = {auth} cls = {"flex-wrap-row"}/>
+            
+            </div>
+            <Navigation arg = {headerNav} cls = {"flex-wrap-row"}/>
+            
         </>
     )
 
@@ -196,5 +197,4 @@ function login()
     return 
 }
 
-
-export default header
+export default headerData

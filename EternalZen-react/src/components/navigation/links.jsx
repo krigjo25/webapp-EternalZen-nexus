@@ -1,12 +1,20 @@
 //  Import dependencies
 import React from "react";
 
-export default function Link({link})
+export default function Link({ obj })
 {
     return (
         <>
-        {link.external && <a className="external" href={link.link}>{link.name}</a>}
-        {!link.external && <a href={link.link}>{link.name}</a>}
+        {obj.external && 
+            <a className="external" href={obj.link}>
+                {obj.name}
+            </a>
+        }
+        {!obj.external && 
+        <a href={obj.link}>
+            {obj.name}
+            </a>
+        }
         </>
     );
 }
