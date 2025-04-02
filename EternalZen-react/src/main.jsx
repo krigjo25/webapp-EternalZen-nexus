@@ -1,11 +1,16 @@
-import { StrictMode } from 'react';
+//  Main.jsx
+
+//  Import dependencies
+import { StrictMode, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+
+//  Import CSS
 import './index.css';
 
 //  Importing components
 import Header from './components/page-header.jsx';
 import Footer from './components/page-footer.jsx';
-import MainSection from './components/page-main.jsx';
+import Main from './components/page-main.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -14,7 +19,7 @@ createRoot(document.getElementById('root')).render(
       <Header />
     </header>
     <main>
-      <MainSection />
+      <Main />
     </main>
     <footer>
       <Footer />

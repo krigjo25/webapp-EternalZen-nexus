@@ -1,13 +1,13 @@
 //  EternalZen header
 //  Importing dependencies
-import { useState } from 'react'
+import { useState } from 'react';
 
 //  Importing components
-import Main from './page-main.jsx';
+import Article from './page-main.jsx';
 import Image from './misc/image.jsx';
 import Navigation from './navigation/navigation.jsx';
 
-function header()
+function header({ data })
 {
     const buttons =[
             {
@@ -36,13 +36,6 @@ function header()
                 func : affirmation,
                 name: "What is Affirmations",
             },
-            {
-                id : 4,
-                exists: true,
-                func : login,
-                name: "Login",
-                
-            },
         ];
 
     const links = [
@@ -61,24 +54,39 @@ function header()
         ];
     const image = 
     {
-        src:'',
+        src:'EternalZenLogo.svg',
         alt:'EternalZenLogo.svg',
     }
+    const auth = [
+        {
+            id : 0,
+            func : login,
+            name: "Login",
+            
+        },
+        {
+            id : 1,
+            link:"register page",
+            name: "register",
+            
+        },
+
+    ]
     return (
         <>
             <Image src = {image.src} alt = {image.alt} />
             <h1>EternalZen - Logo</h1>
-            <Navigation buttons={buttons} links={links}/>
+            <Navigation arg = {buttons} links={links}/>
         </>
     )
+
 }
 
 function aboutUs()
 
 {
     //  Initializing a data structure
-    const data = 
-    {
+    const data = {
         headline: "About EternalZen & our philiosophy",
 
         p1: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis porta dolor,
@@ -91,7 +99,7 @@ function aboutUs()
             lacinia mattis purus. In tempus, est eget feugiat malesuada, mauris ante efficitur dolor,
             sit amet viverra neque lacus at orci. Etiam lacinia massa a est tincidunt egestas. `,
 
-        p2: ` Mauris sit amet arcu tincidunt libero ornare vestibulum. Duis convallis nunc vel nulla ultrices,
+        p2: `Mauris sit amet arcu tincidunt libero ornare vestibulum. Duis convallis nunc vel nulla ultrices,
             id pretium ligula rhoncus. Maecenas a diam sem. Morbi ullamcorper feugiat pharetra. Duis gravida
             ante accumsan pulvinar faucibus. Donec eu nulla eu nulla accumsan sagittis. Maecenas ac eros non
             elit tempor maximus. Nulla mollis, odio sed consequat tempus, mi dui tincidunt felis, at cursus
@@ -126,7 +134,6 @@ function aboutUs()
             vel libero a, tincidunt posuere neque. Proin sodales a nulla quis vehicula.`,
     }
 
-    return <Main data = {data} />;
 }
 
 function spirituality()
@@ -147,7 +154,7 @@ function spirituality()
     ante accumsan pulvinar faucibus. Donec eu nulla eu nulla accumsan sagittis. Maecenas ac eros non
     elit tempor maximus. Nulla mollis, odio sed consequat tempus, mi dui tincidunt felis, at cursus
     mauris massa sed augue. Aenean vulputate iaculis ligula ut luctus. Mauris id molestie sem.`
-    return <Main text={message}/>;
+    return <Article text={message}/>;
 }
 function meditation()
 {
@@ -167,7 +174,7 @@ function meditation()
     placerat egestas. Praesent scelerisque facilisis odio, et mollis quam luctus quis.
     Mauris at aliquam enim, non lobortis risus. Aenean suscipit quam at quam facilisis
     elementum. Nam sed condimentum metus. Cras semper eget neque eu sollicitudin.`
-    return <Main text={message}/>;
+    return <Article text={message}/>;
 }
 function affirmation()
 {
@@ -181,7 +188,7 @@ function affirmation()
     Duis libero massa, gravida vel rhoncus sit amet, gravida in enim. Donec orci nibh, pulvinar sit amet quam vel,
     lacinia mattis purus. In tempus, est eget feugiat malesuada, mauris ante efficitur dolor,
     sit amet viverra neque lacus at orci. Etiam lacinia massa a est tincidunt egestas.`
-    return <Main text={message}/>;
+    return <Article text={message}/>;
 }
 
 function login()

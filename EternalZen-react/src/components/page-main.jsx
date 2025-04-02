@@ -1,14 +1,10 @@
 //  EternalZen Main content
 //  Importing dependencies
+import Article from './article.jsx'
 
-export default function article({data})
+export default function index()
 {
-
-    //  Initializing data
-    console.log(data);
     return (
-            <article className='flex-wrap-row'>
-                {data && <h2>{data.headline}</h2>}
-            </article>
+        <Article />
     );
 }
