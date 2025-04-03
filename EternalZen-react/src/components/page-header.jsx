@@ -1,14 +1,18 @@
 //  EternalZen header
 //  Importing dependencies
 import { useState } from 'react';
+import { storeObject } from '../utils/stores.js';
+
 
 //  Importing components
 import Article from './page-main.jsx';
 import Image from './misc/image.jsx';
 import Navigation from './navigation/navigation.jsx';
 
-function headerData({ data })
+
+function Header()
 {
+    const { setObject } = storeObject()
     //  Initalizing buttons, links & images
     const auth = [
         {
@@ -28,29 +32,44 @@ function headerData({ data })
 
     ];
 
+    //  Map the functions
+    const mapData = {
+        0: () => aboutUs(),
+        1: () => spirituality(),
+        2: () => meditation(),
+        3: () => affirmation(),
+    };
+
+    const handleData = (id) =>
+        { 
+            const data = mapData[id];
+            //  Ensure that there is some mapped data to set
+            data ? setObject(data()) : console.warn(`No functions mapped for this id : ${id}`);
+        }
+
     const headerNav =[
         {
             id : 0,
             type: "button",
-            func : aboutUs,
+            func : () => handleData(0),
             name : "About us & our philiosophy",
         },
         {
             id : 1,
             type: "button",
-            func : spirituality,
+            func : () => handleData(this.id),
             name: "What is Spirituality",
         },
         {
             id : 2,
             type: "button",
-            func : meditation,
+            func : () => handleData(this.id),
             name: "What is Meditation",
         },
         {
             id : 3,
             type: "button",
-            func : affirmation,
+            func : () => handleData(this.id),
             name: "What is Affirmations",
         },
         {
@@ -83,10 +102,10 @@ function headerData({ data })
 
 }
 
+
 function aboutUs()
 
 {
-    //  Initializing a data structure
     const data = {
         headline: "About EternalZen & our philiosophy",
 
@@ -132,9 +151,9 @@ function aboutUs()
             feugiat libero elit sed sapien. Nam vitae congue orci. Interdum et malesuada
             fames ac ante ipsum primis in faucibus. Duis erat arcu, scelerisque eu egestas
             non, maximus a lectus. Nam eu odio nibh. Pellentesque velit erat, vestibulum
-            vel libero a, tincidunt posuere neque. Proin sodales a nulla quis vehicula.`,
-    }
+            vel libero a, tincidunt posuere neque. Proin sodales a nulla quis vehicula.`,}
 
+    return data;
 }
 
 function spirituality()
@@ -197,4 +216,4 @@ function login()
     return 
 }
 
-export default headerData
+export default Header
