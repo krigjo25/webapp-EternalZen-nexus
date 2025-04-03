@@ -14,7 +14,7 @@ export default function Navigation({ arg, cls })
             <nav className={cls}>
                 {arg && arg.map((object) => 
                 <>
-                    {object.type == "button" && ( <Btn key = {object.id} btn = {object} />)}
+                    {object.type == "button" && (<Btn key = {object.id} btn = {object} />)}
                     {object.type == "link" && (<Link key = {object.id} obj = {object} />)}
                 
                 </>
