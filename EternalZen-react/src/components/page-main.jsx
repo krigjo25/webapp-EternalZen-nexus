@@ -1,6 +1,6 @@
 //  EternalZen Main content
 //  Importing dependencies
-import Article from './article.jsx';
+import Article from './misc/article.jsx';
 import { storeObject } from '../utils/stores.js';
 
 export default function index()

@@ -2,7 +2,7 @@ export default function article({ article })
 {
     console.log(article);
     return (
-        <article className='flex-wrap-row'>
+        <article className={'flex-wrap-row ' + article.cls}>
             <h2>{article.headline}</h2>
             {article.paragraphs.map(
                 (element, i) => (

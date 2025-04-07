@@ -89,13 +89,13 @@ function Header()
     
     return (
         <>
-            <div className='top flex-wrap-row-justify-center'> 
+            <div className='flex-wrap-row-justify-space-between'> 
                 <Image src = {logo.src} alt = {logo.alt} />
                 <h1>EternalZen - Logo</h1>
-                <Navigation arg = {auth} cls = {"flex-wrap-row"}/>
+                <Navigation arg = {auth} cls = {"flex-wrap-row-justify-center"}/>
             
             </div>
-            <Navigation arg = {headerNav} cls = {"flex-wrap-row"}/>
+            <Navigation arg = {headerNav} cls = {"flex-wrap-row-justify-center"}/>
             
         </>
     )
@@ -107,6 +107,7 @@ function aboutUs()
 
 {
     const data = {
+        cls: "justify-text-size",
         headline: "EternalZen & our philiosophy",
 
         paragraphs:
@@ -163,26 +164,28 @@ function aboutUs()
 function spirituality()
 {
 
-    const data ={ 
-    headline: "What is Spirituality?",
-    paragraphs:
-    [
-        `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis porta dolor,
-        ut scelerisque ex accumsan sed. Suspendisse id mauris a ex volutpat porttitor vel aliquet lacus.
-        Quisque vestibulum rutrum placerat. Mauris interdum turpis lacus, et interdum tortor imperdiet a.
-        Pellentesque rutrum leo bibendum sodales commodo. Morbi magna mi, sollicitudin sed consectetur at,
-        molestie sit amet nisi. Nullam nisl velit, finibus in lectus a, dapibus porttitor leo.
-        Sed at sapien nec magna placerat facilisis. Donec posuere dictum semper. Ut non dui eget diam sollicitudin iaculis.
-        Duis libero massa, gravida vel rhoncus sit amet, gravida in enim. Donec orci nibh, pulvinar sit amet quam vel,
-        lacinia mattis purus. In tempus, est eget feugiat malesuada, mauris ante efficitur dolor,
-        sit amet viverra neque lacus at orci. Etiam lacinia massa a est tincidunt egestas.`,
+    const data =
+    { 
+        cls: "justify-text-size",
+        headline: "What is Spirituality?",
+        paragraphs:
+        [
+            `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis porta dolor,
+            ut scelerisque ex accumsan sed. Suspendisse id mauris a ex volutpat porttitor vel aliquet lacus.
+            Quisque vestibulum rutrum placerat. Mauris interdum turpis lacus, et interdum tortor imperdiet a.
+            Pellentesque rutrum leo bibendum sodales commodo. Morbi magna mi, sollicitudin sed consectetur at,
+            molestie sit amet nisi. Nullam nisl velit, finibus in lectus a, dapibus porttitor leo.
+            Sed at sapien nec magna placerat facilisis. Donec posuere dictum semper. Ut non dui eget diam sollicitudin iaculis.
+            Duis libero massa, gravida vel rhoncus sit amet, gravida in enim. Donec orci nibh, pulvinar sit amet quam vel,
+            lacinia mattis purus. In tempus, est eget feugiat malesuada, mauris ante efficitur dolor,
+            sit amet viverra neque lacus at orci. Etiam lacinia massa a est tincidunt egestas.`,
 
-        `Mauris sit amet arcu tincidunt libero ornare vestibulum. Duis convallis nunc vel nulla ultrices,
-        id pretium ligula rhoncus. Maecenas a diam sem. Morbi ullamcorper feugiat pharetra. Duis gravida
-        ante accumsan pulvinar faucibus. Donec eu nulla eu nulla accumsan sagittis. Maecenas ac eros non
-        elit tempor maximus. Nulla mollis, odio sed consequat tempus, mi dui tincidunt felis, at cursus
-        mauris massa sed augue. Aenean vulputate iaculis ligula ut luctus. Mauris id molestie sem.`
-    ]
+            `Mauris sit amet arcu tincidunt libero ornare vestibulum. Duis convallis nunc vel nulla ultrices,
+            id pretium ligula rhoncus. Maecenas a diam sem. Morbi ullamcorper feugiat pharetra. Duis gravida
+            ante accumsan pulvinar faucibus. Donec eu nulla eu nulla accumsan sagittis. Maecenas ac eros non
+            elit tempor maximus. Nulla mollis, odio sed consequat tempus, mi dui tincidunt felis, at cursus
+            mauris massa sed augue. Aenean vulputate iaculis ligula ut luctus. Mauris id molestie sem.`
+        ]
 }
     return data;
 }
@@ -192,7 +195,9 @@ function meditation()
 
     let data =
     {
+        cls: "justify-text-size",
         headline: "What is Meditation?",
+        
         paragraphs: 
         [
             `Sed mattis facilisis pulvinar. Integer aliquam lacus id convallis lobortis. Vivamus vestibulum
@@ -218,6 +223,7 @@ function affirmation()
 
     let data = 
     {
+        cls: "justify-text-size",
         headline: "What is Affirmation?",
         paragraphs:
         [

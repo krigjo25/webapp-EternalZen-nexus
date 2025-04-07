@@ -1,3 +1,8 @@
+.justify-text-size {
+  inline-size: 66vw;
+  text-align: justify;
+}
+
 flex-row, .flex-row {
   display: flex;
   flex-direction: row;
@@ -82,6 +87,7 @@ flex-wrap-reversed-column, .flex-wrap-reversed-column {
 }
 
 a {
+  margin: 0.3em;
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
@@ -94,7 +100,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -105,7 +110,7 @@ h1 {
 }
 
 button {
-  margin: 0.2Wem;
+  margin: 0.2em;
   font-size: 1em;
   cursor: pointer;
   font-weight: 500;
