@@ -1,17 +1,16 @@
 //  Main.jsx
 
 //  Import dependencies
-import { StrictMode, useState } from 'react';
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 //  Import CSS
 import './assets/css/index.css';
 
 //  Importing components
+import Main from './components/page-main.jsx';
 import Header from './components/page-header.jsx';
 import Footer from './components/page-footer.jsx';
-import Main from './components/page-main.jsx';
-
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
