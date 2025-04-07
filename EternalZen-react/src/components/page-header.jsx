@@ -15,7 +15,7 @@ function Header()
     const auth = [
         {
             id : 0,
-            func : login,
+            func : () => handleData(4),
             name: 'Login',
             type: 'button',
             
@@ -35,6 +35,8 @@ function Header()
         1: () => spirituality(),
         2: () => meditation(),
         3: () => affirmation(),
+
+        // Authorizations
     };
 
     const handleData = (id) =>
@@ -235,7 +237,11 @@ function affirmation()
 
 function login()
 {
-    return 
+    return `<form>
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+    </form>`;
 }
 
 export default Header

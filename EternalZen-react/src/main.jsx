@@ -5,7 +5,7 @@ import { StrictMode, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 
 //  Import CSS
-import './index.css';
+import './assets/css/index.css';
 
 //  Importing components
 import Header from './components/page-header.jsx';
