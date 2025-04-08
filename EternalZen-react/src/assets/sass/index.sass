@@ -7,23 +7,24 @@
 
 :root 
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif 
-    line-height: 1.5 
-    font-weight: 400 
+    line-height: 1.5
+    font-weight: 400
+    font-synthesis: none
     color-scheme: light dark 
-    color: $font-dark-light
-    background-color: $bg-dark 
-    font-synthesis: none 
-    text-rendering: optimizeLegibility 
-    -webkit-font-smoothing: antialiased 
-    -moz-osx-font-smoothing: grayscale 
+    color: $font-lavendel-dark
+    background-color: $bg-dark
+    -moz-osx-font-smoothing: grayscale
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    
 
 a
     margin :.3em
     font-weight: 500 
-    color: #646cff 
-    text-decoration: inherit 
+    text-decoration: inherit
+    color: $color-element-focus-dark
 
-    &:hover 
+    &:hover
         color: #535bf2 
         color: #747bff 
 
@@ -45,15 +46,16 @@ button
     border-radius: 8px
     font-family: inherit
     padding: 0.6em 1.2em
-    background-color: #1a1a1a 
+    color: $btn-color-dark
+    background-color: rgb(51, 51, 51)
     transition: border-color 0.25s 
     border: 1px solid transparent
 
     &:hover 
         border-color: #646cff
 
-button:focus,button:focus-visible
-    outline: 4px auto -webkit-focus-ring-color
+    &:focus, &:focus-visible
+        outline: 4px auto $color-element-focus-dark
 
 @media (prefers-color-scheme &: light)
     :root
