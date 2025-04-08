@@ -20,7 +20,7 @@ createRoot(document.getElementById('root')).render(
     <main>
       <Main />
     </main>
-    <footer>
+    <footer className='flex-wrap-row-justify-center'>
       <Footer />
     </footer>
   </StrictMode>,
