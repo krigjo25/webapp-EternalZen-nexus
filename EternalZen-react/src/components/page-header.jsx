@@ -107,7 +107,7 @@ function aboutUs()
 
 {
     const data = {
-        cls: "justify-text-size",
+        cls: "justify-text-size margin-inline-11",
         headline: "EternalZen & our philiosophy",
 
         paragraphs:
@@ -166,7 +166,7 @@ function spirituality()
 
     const data =
     { 
-        cls: "justify-text-size",
+        cls: "justify-text-size margin-inline-11",
         headline: "What is Spirituality?",
         paragraphs:
         [
@@ -195,7 +195,7 @@ function meditation()
 
     let data =
     {
-        cls: "justify-text-size",
+        cls: "justify-text-size margin-inline-11",
         headline: "What is Meditation?",
         
         paragraphs: 
@@ -223,7 +223,7 @@ function affirmation()
 
     let data = 
     {
-        cls: "justify-text-size",
+        cls: "justify-text-size margin-inline-11",
         headline: "What is Affirmation?",
         paragraphs:
         [
