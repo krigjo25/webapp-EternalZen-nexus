@@ -2,26 +2,20 @@
 
 //  Import dependencies
 import { StrictMode } from 'react';
+import { router } from './router.jsx';
 import { createRoot } from 'react-dom/client';
+import { RouterProvider } from 'react-router-dom';
 
 //  Import CSS
 import './assets/css/index.css';
 
 //  Importing components
-import Main from './components/page-main.jsx';
-import Header from './components/page-header.jsx';
-import Footer from './components/page-footer.jsx';
+import App from './App.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <header>
-      <Header />
-    </header>
-    <main>
-      <Main />
-    </main>
-    <footer className='flex-wrap-row-justify-center'>
-      <Footer />
-    </footer>
+    <RouterProvider router={router}>
+      <App />
+    </RouterProvider>
   </StrictMode>,
 )
