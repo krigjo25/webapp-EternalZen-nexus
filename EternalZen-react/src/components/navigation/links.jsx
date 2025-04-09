@@ -16,7 +16,7 @@ export default function Link({ obj })
         {!obj.external &&
             
                 <a href={obj.link}>
-                    <div class ='link-btn'>
+                    <div className ='link-btn'>
                         {obj.name}
                     </div>
                 </a>
