@@ -24,7 +24,7 @@ function Header()
             id : 1,
             type: 'link',
             name: "register",
-            link:"register page",
+            link:"user-registeration",
         },
 
     ];
@@ -90,10 +90,13 @@ function Header()
     return (
         <>
             <div className='flex-wrap-row-justify-space-between'> 
-                <Image src = {logo.src} alt = {logo.alt} />
-                <h1>EternalZen - Logo</h1>
+                <a href = "/">
+                    <Image src = {logo.src} alt = {logo.alt} />
+                </a>
+                <a href='/'>
+                    <h1>EternalZen - Logo</h1>
+                </a>
                 <Navigation arg = {auth} cls = {"flex-wrap-row-justify-center"}/>
-            
             </div>
             <Navigation arg = {headerNav} cls = {"flex-wrap-row-justify-center"}/>
             
