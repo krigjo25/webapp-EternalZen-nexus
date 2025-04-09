@@ -11,11 +11,10 @@ import Inputs from './inputs';
 
 export default function InitializeForm(formData)
 {
+    //  Destructuring the formData object
     const btn = formData.data.btn;
     const inputs = formData.data.inputs;
     
-
-    console.log(inputs);
     return (
         <>
          {inputs.map((data, i) => {

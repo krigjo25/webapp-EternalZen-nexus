@@ -1,6 +1,7 @@
 //  EternalZen header
 //  Importing dependencies
 import { storeObject } from '../utils/stores.js';
+import { useNavigate } from 'react-router-dom';
 
 //  Importing components
 import Image from './misc/image.jsx';
@@ -9,6 +10,8 @@ import Navigation from './navigation/navigation.jsx';
 
 function Header()
 {
+    //  Importing Hooks
+    const navigate = useNavigate();
     const { setObject } = storeObject()
     
     //  Initalizing buttons, links & images
@@ -35,13 +38,19 @@ function Header()
         1: () => spirituality(),
         2: () => meditation(),
         3: () => affirmation(),
-
-        // Authorizations
+        
+        //  Authorization
+        4: () => login(),
     };
 
     const handleData = (id) =>
         { 
+            //  Navigate home
+            navigate('/');
+
+            //  Ensure the vailidity of the id
             const data = mapData[id];
+
 
             //  Ensure that there is some mapped data to set
             data ? setObject(data()) : console.warn(`No functions mapped for this id : ${id}`);
@@ -109,6 +118,7 @@ function Header()
 function aboutUs()
 
 {
+    
     const data = {
         cls: "justify-text-size margin-inline-11",
         headline: "EternalZen & our philiosophy",

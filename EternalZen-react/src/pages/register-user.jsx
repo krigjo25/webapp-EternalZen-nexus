@@ -2,14 +2,13 @@
 
 //  Importing dependencies
 import React from 'react';
-import { storeObject } from '../utils/stores.js';
 //  Importing components
 import Form from '../components/misc/form/form';
 
 export default function Registration() 
 {
-    const { setObject } = storeObject();
 
+    //  Registering the user form
     const formData = {
         inputs: [
             {
@@ -63,14 +62,11 @@ export default function Registration()
     ]
     };
 
-    //  Set the data to the store
-    //  handleData(() => formData);
-
     return (
         <>
         <Form data={formData} />
         </>
-    )
+    );
 }
 
 
