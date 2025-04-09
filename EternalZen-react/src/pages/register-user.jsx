@@ -10,43 +10,39 @@ export default function Registration()
 {
     const { setObject } = storeObject();
 
-    const handleData = (object) =>
-        { 
-            const data = object;
-
-            //  Ensure that there is some mapped data to set
-            data ? setObject(data()) : console.warn(`No data to set`);
-        }
-
     const formData = {
         inputs: [
             {
-                type: 'text',
                 value: '',
+                type: 'text',
                 required: true,
+                name: 'username',
                 cls: 'text-field',
                 placeholder: 'E.G JDoe23',
                 
             },
             {
-                type: 'Email',
                 value: '',
+                type: 'text',
+                name: 'email',
                 required: true,
                 cls: 'text-field',
                 placeholder: 'E.G som12@gmail.com',
             },
             {
-                type: 'password',
                 value: '',
                 required: true,
                 cls: 'pw-field',
+                type: 'password',
+                name : 'password',                
                 placeholder: 'E.G 12345678',
             },
             {
-                type: 'password',
                 value: '',
                 required: true,
                 cls: 'pw-field',
+                type: 'password',
+                name: 'confirm-password',
                 placeholder: 'E.G 12345678',
             },
  

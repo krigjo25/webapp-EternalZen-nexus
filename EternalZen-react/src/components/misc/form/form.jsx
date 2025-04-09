@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 
 //  Components
 import Btn from '../btn';
+import Label from './Label';
 import Inputs from './inputs';
 
 export default function InitializeForm(formData)
@@ -19,7 +20,10 @@ export default function InitializeForm(formData)
         <>
          {inputs.map((data, i) => {
                 return (
-                    <Inputs key={i} input = {data}/>
+                    <>
+                        <Label key={i} cls='lbl' name = {data.name + " :"} />
+                        <Inputs key={i} input = {data}/>
+                    </>
         )})}
         {btn.map((data, i) => {
                 return (
