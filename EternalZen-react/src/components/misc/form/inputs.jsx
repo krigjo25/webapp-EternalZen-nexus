@@ -18,7 +18,7 @@ export default function Inputs( { input, formID }) {
         <>
             {(input.type === types[0] || input.type === types[1]) &&  (
                 <>
-                    <label htmlFor = {input.name} className={"label-" + input.type} > 
+                    <label htmlFor = {input.name} className={" label-" + input.type} > 
                         {input.name}
                     </label>
                     <input 

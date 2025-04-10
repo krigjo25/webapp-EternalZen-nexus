@@ -18,7 +18,7 @@ export default function InitializeForm(formData)
     return (
         <form className={formData.data.cls} action={formData.data.action} method={formData.data.method}>
             {(inputs) && ( 
-                <div className={ formData.data.sectionCls}>
+                <div className='flex-wrap-row'>
                     {inputs.map((data, i) => {
                         return (
                             <Input key={i} input={ data } formID ={ formData.data.id } />)},
@@ -27,7 +27,7 @@ export default function InitializeForm(formData)
             )}
                 
             {(btn) && (
-                <div>
+                <div className='flex-wrap-row-justify-space-evenly'>
                     {btn.map((data, i) => {
                         return (
                             <Btn key={i} btn = {data}/>

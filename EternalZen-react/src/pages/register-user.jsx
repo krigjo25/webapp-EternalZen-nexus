@@ -78,7 +78,7 @@ export default function Registration()
         id : 0,
         method: 'post',
         action:'registerData.html',
-        cls: "flex-column-justify-space-between bs-32",
+        cls: "flex-column-justify-space-between is-47",
         
         
     };
