@@ -1,3 +1,5 @@
+//  EternalZen-footer content
+
 //  Importing components
 import Navigation from './navigation/navigation.jsx'
 

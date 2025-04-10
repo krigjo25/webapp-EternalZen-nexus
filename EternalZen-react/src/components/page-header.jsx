@@ -1,4 +1,5 @@
-//  EternalZen header
+//  EternalZen header content
+
 //  Importing dependencies
 import { storeObject } from '../utils/stores.js';
 import { useNavigate } from 'react-router-dom';
@@ -113,7 +114,6 @@ function Header()
     )
 
 }
-
 
 function aboutUs()
 
@@ -231,6 +231,7 @@ function meditation()
     }
     return data;
 }
+
 function affirmation()
 {
 
@@ -263,4 +264,5 @@ function login()
     </form>`);
 }
 
+//  Exporting the component
 export default Header
