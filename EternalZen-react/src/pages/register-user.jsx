@@ -16,7 +16,7 @@ export default function Registration()
                 type: 'text',
                 required: true,
                 name: 'username',
-                cls: 'text-field',
+                cls: 'credential-field',
                 placeholder: 'E.G JDoe23',
                 
             },
@@ -25,13 +25,13 @@ export default function Registration()
                 type: 'text',
                 name: 'email',
                 required: true,
-                cls: 'text-field',
+                cls: 'credential-field',
                 placeholder: 'E.G som12@gmail.com',
             },
             {
                 value: '',
                 required: true,
-                cls: 'pw-field',
+                cls: 'credential-field',
                 type: 'password',
                 name : 'password',                
                 placeholder: 'E.G 12345678',
@@ -39,11 +39,25 @@ export default function Registration()
             {
                 value: '',
                 required: true,
-                cls: 'pw-field',
+                cls: 'credential-field',
                 type: 'password',
                 name: 'confirm-password',
                 placeholder: 'E.G 12345678',
             },
+            {
+                value: false,
+                type: 'checkbox',
+                required: true,
+                cls: 'control-field',
+                name: 'Agrees to the Terms Of Agreement',
+            },
+            {
+                value: false,
+                type: 'checkbox',
+                required: true,
+                cls: 'control-field',
+                name: 'Read Privacy Policy',
+            }
  
         ],
         btn:
@@ -59,7 +73,14 @@ export default function Registration()
                 name: 'Reset Form',
             },
 
-    ]
+        ],
+
+        id : 0,
+        method: 'post',
+        action:'registerData.html',
+        cls: "flex-column-justify-space-between bs-32",
+        
+        
     };
 
     return (

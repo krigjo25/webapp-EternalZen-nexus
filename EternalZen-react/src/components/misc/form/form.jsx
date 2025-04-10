@@ -6,29 +6,30 @@ import PropTypes from 'prop-types';
 
 //  Components
 import Btn from '../btn';
-import Label from './Label';
-import Inputs from './inputs';
+
+import Input from './inputs';
 
 export default function InitializeForm(formData)
 {
     //  Destructuring the formData object
     const btn = formData.data.btn;
     const inputs = formData.data.inputs;
-    
+    console.log(inputs)
     return (
-        <>
-         {inputs.map((data, i) => {
-                return (
-                    <>
-                        <Label key={i} cls='lbl' name = {data.name + " :"} />
-                        <Inputs key={i} input = {data}/>
-                    </>
-        )})}
-        {btn.map((data, i) => {
-                return (
-                    <Btn key={i} btn = {data}/>
-        )})}
-        </>
+        <form className={formData.data.cls} action={formData.data.action} method={formData.data.method}>
+            {inputs.map((data, i) => {
+                console.log(i, data)
+                    return (
+                        <Input key={i} input={ data } formID ={ formData.data.id } />)},
+            )}
+
+            <div>
+                {btn.map((data, i) => {
+                        return (
+                            <Btn key={i} btn = {data}/>
+                )})}
+            </div>
+        </form>
     )
 }
 
