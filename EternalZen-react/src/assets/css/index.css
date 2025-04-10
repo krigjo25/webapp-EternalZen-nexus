@@ -11,6 +11,10 @@
   block-size: 32vh;
 }
 
+.is-47 {
+  inline-size: 47vw;
+}
+
 flex-row, .flex-row {
   display: flex;
   flex-direction: row;
