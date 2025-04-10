@@ -7,6 +7,10 @@
   margin-inline: 11vw;
 }
 
+.bs-32 {
+  block-size: 32vh;
+}
+
 flex-row, .flex-row {
   display: flex;
   flex-direction: row;
@@ -44,12 +48,12 @@ flex-wrap-reversed-row, .flex-wrap-reversed-row {
   align-items: flex-end;
 }
 
-flex-column, .flex-column {
+flex-column, .flex-column-justify-space-between, .flex-column {
   display: flex;
   flex-direction: column;
 }
 
-flex-wrap-column, .flex-wrap-column, .flex-wrap-column-justify-space-between, .flex-wrap-column-align-items-center, .flex-wrap-column-align-content-center {
+flex-wrap-column, .flex-wrap-column, .flex-wrap-column-justify-space-between, .flex-wrap-column-align-content-space-between, .flex-wrap-column-align-items-center, .flex-wrap-column-align-content-center {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -69,6 +73,10 @@ flex-wrap-reversed-column, .flex-wrap-reversed-column {
   align-items: center;
 }
 
+.flex-wrap-column-align-content-space-between {
+  align-content: space-between;
+}
+
 .flex-wrap-column-justify-space-between {
   justify-content: space-between;
 }
@@ -79,6 +87,15 @@ flex-wrap-reversed-column, .flex-wrap-reversed-column {
 
 .flex-justify-center {
   justify-content: center;
+}
+
+.flex-column-justify-space-between {
+  justify-content: space-between;
+}
+
+main input {
+  padding-block: 1vh;
+  padding-inline-start: 5vw;
 }
 
 header nav div.link-btn {

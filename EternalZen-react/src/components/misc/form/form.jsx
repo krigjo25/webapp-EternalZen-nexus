@@ -17,18 +17,23 @@ export default function InitializeForm(formData)
     console.log(inputs)
     return (
         <form className={formData.data.cls} action={formData.data.action} method={formData.data.method}>
-            {inputs.map((data, i) => {
-                console.log(i, data)
-                    return (
-                        <Input key={i} input={ data } formID ={ formData.data.id } />)},
+            {(inputs) && ( 
+                <div className={ formData.data.sectionCls}>
+                    {inputs.map((data, i) => {
+                        return (
+                            <Input key={i} input={ data } formID ={ formData.data.id } />)},
+                        )}
+                </div>
             )}
-
-            <div>
-                {btn.map((data, i) => {
+                
+            {(btn) && (
+                <div>
+                    {btn.map((data, i) => {
                         return (
                             <Btn key={i} btn = {data}/>
-                )})}
-            </div>
+                    )})};
+                </div>
+        )}
         </form>
     )
 }
