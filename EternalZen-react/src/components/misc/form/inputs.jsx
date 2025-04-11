@@ -91,6 +91,5 @@ formInput.propTypes =
 
 };
 
-
 //  Exporting the component
 export default formInput;
