@@ -10,6 +10,16 @@ export default function Registration()
 
     //  Registering the user form
     const formData = {
+        field :
+        {
+            cls: 'field-control',
+            legend: 
+            {
+                cls: 'user-credential',
+                title: 'Register an account',
+                
+            },
+        },
         inputs: [
             {
                 value: '',
@@ -81,7 +91,8 @@ export default function Registration()
 
         id : 0,
         method: 'post',
-        action:'registerData.html',
+        action:'/tansfer-data.html',
+        tile: 'Register an account',
         cls: "flex-column-justify-space-between is-47",
         
         

@@ -13,27 +13,29 @@ export default function InitializeForm(formData)
 {
     //  Destructuring the formData object
     const btn = formData.data.btn;
+    const field = formData.data.field;
     const inputs = formData.data.inputs;
-    console.log(inputs)
+
     return (
         <form className={formData.data.cls} action={formData.data.action} method={formData.data.method}>
             {(inputs) && ( 
-                <div className='flex-wrap-row'>
+                <fieldset className={'flex-wrap-row ' + field.cls}>
+                    <legend className={field.legend.cls}>{field.legend.title}</legend>
                     {inputs.map((data, i) => {
                         return (
                             <Input key={i} input={ data } formID ={ formData.data.id } />
                             )},
                             
                         )}
-                </div>
+                </fieldset>
             )}
-                
+
             {(btn) && (
                 <div className='flex-wrap-row-justify-space-evenly'>
                     {btn.map((data, i) => {
                         return (
                             <Btn key={i} btn = {data}/>
-                    )})};
+                    )})}
                 </div>
         )}
         </form>
@@ -44,6 +46,7 @@ export default function InitializeForm(formData)
 InitializeForm.propTypes = 
 {
     data: PropTypes.shape({
+        
         inputs: PropTypes.arrayOf(
             PropTypes.shape({
                 type: PropTypes.string.isRequired,
@@ -58,5 +61,10 @@ InitializeForm.propTypes =
             cls: PropTypes.string.isRequired,
             name: PropTypes.string.isRequired,
         })).isRequired,
+
+        cls: PropTypes.string.isRequired,
+        tile: PropTypes.string.isRequired,
+        action: PropTypes.string.isRequired,
+        method: PropTypes.string.isRequired,
     })
 };
