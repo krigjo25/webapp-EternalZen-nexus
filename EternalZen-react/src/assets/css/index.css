@@ -1,3 +1,9 @@
+header .logo {
+  inline-size: 100%;
+}
+header nav .header-nav {
+  inline-size: 100%;
+}
 header nav div.link-btn {
   padding: 0.6em;
 }
