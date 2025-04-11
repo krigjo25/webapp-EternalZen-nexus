@@ -27,8 +27,8 @@ function Header()
         {
             id : 1,
             type: 'link',
-            name: "register",
-            link:"user-registeration",
+            name: 'register',
+            link:'/user-registeration',
         },
 
     ];
@@ -57,7 +57,7 @@ function Header()
             data ? setObject(data()) : console.warn(`No functions mapped for this id : ${id}`);
         }
 
-    const headerNav =[
+    const headerBtn =[
         {
             id : 0,
             type: "button",
@@ -86,8 +86,8 @@ function Header()
             id : 4,
             type: "link",
             external : false,
+            link: '/calibrations',
             name: 'David R. Hawkings\'s Calibrations of consiousness',
-            link: '',
         },
     ];
 
@@ -108,7 +108,7 @@ function Header()
                 </a>
                 <Navigation arg = {auth} cls = {"flex-wrap-row-justify-center"}/>
             </div>
-            <Navigation arg = {headerNav} cls = {"flex-wrap-row-justify-center"}/>
+            <Navigation arg = {headerBtn} cls = {"flex-wrap-row-justify-center"}/>
             
         </>
     )

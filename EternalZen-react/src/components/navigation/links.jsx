@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 
-export default function Link({ obj })
+function Anchor({ obj })
 {
     return (
         <>
@@ -18,7 +18,7 @@ export default function Link({ obj })
         }
         {!obj.external &&
             
-                <Link href={obj.link}>
+                <Link to={obj.link}>
                     <div className ='link-btn'>
                         {obj.name}
                     </div>
@@ -29,3 +29,6 @@ export default function Link({ obj })
 }
 
 // Define prop types for the component
+
+//  Export the component
+export default Anchor;

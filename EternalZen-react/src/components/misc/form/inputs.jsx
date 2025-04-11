@@ -3,9 +3,11 @@
 //  Importing dependencies
 import React from 'react';
 import PropTypes from 'prop-types';
+
+//  Importing components
 import { Link } from 'react-router-dom';
 
-export default function Inputs( { input, formID }) {
+function formInput( { input, formID }) {
 
     //  Initializing an array of values
     const types = 
@@ -46,37 +48,37 @@ export default function Inputs( { input, formID }) {
             )}
             {( input.type == types[2] || input.type === types[3] ) && (
                 <div className='flex-wrap-row input-container'>
-                    <input 
-                            form = {input.form}
-                            name = {input.name}
-                            type = {input.type}
-                            className ={input.cls ? input.cls : "control-field"}
-                            disabled = {input.disabled ? input.disabled : false}
-                            multiple = {input.multiple ? input.multiple : false}
-                        />
+                    <div className='flex-wrap-row-justify-center'>
+                        <input 
+                                form = {input.form}
+                                name = {input.name}
+                                type = {input.type}
+                                className ={input.cls ? input.cls : "control-field"}
+                                disabled = {input.disabled ? input.disabled : false}
+                                multiple = {input.multiple ? input.multiple : false}
+                            />
 
-                {(input.href) && (
-                    <Link to = {input.href} >
-                        <label htmlFor = {input.name} className={" label-" + input.type} >
-                            {input.name}
-                        </label>
-                    </Link>
-                )}
-                {(!input.href) && (
-                    <label htmlFor = {input.name} className={" label-" + input.type} >
-                        {input.name}
-                    </label>
-                )}
-                
-                    
+                        {(input.href) && (
+                            <Link to = {input.href} >
+                                <label htmlFor = {input.name} className={" label-" + input.type} >
+                                    {input.name}
+                                </label>
+                            </Link>
+                        )}
+                        {(!input.href) && (
+                            <label htmlFor = {input.name} className={" label-" + input.type} >
+                                {input.name}
+                            </label>
+                        )}        
+                    </div>
                 </div>
-            )}
+            )}        
         </>
     );
 }
 
 //  Defines the prop Type for the component
-Inputs.propTypes = 
+formInput.propTypes = 
 {
     data: PropTypes.shape({
         inputs: PropTypes.arrayOf(
@@ -88,3 +90,7 @@ Inputs.propTypes =
     })
 
 };
+
+
+//  Exporting the component
+export default formInput;

@@ -10,29 +10,29 @@ function footer()
             id: 0,
             type: 'link',
             external: false,
-            name: 'Copyrights notice',
-            link: '',
+            name: 'Copyrights notes',
+            link: '/copynotes',
         },
         {
             id: 1,
             type: 'link',
             external: false,
             name: 'Terms Of Agreement',
-            link: '',
+            link: '/toa',
         },
         {
             id: 2,
             type: 'link',
             external: false,
             name: 'Privacy Policy',
-            link: '',
+            link: '/pp',
         },
         {
             id: 3,
             type: 'link',
             external: false,
             name: 'Contact The Team',
-            link: '',
+            link: 'contact-us',
         },
     ]
     return (
@@ -43,5 +43,5 @@ function footer()
     </>)
 }
 
-
+//  Exporting the component
 export default footer
