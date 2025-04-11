@@ -21,7 +21,9 @@ export default function InitializeForm(formData)
                 <div className='flex-wrap-row'>
                     {inputs.map((data, i) => {
                         return (
-                            <Input key={i} input={ data } formID ={ formData.data.id } />)},
+                            <Input key={i} input={ data } formID ={ formData.data.id } />
+                            )},
+                            
                         )}
                 </div>
             )}

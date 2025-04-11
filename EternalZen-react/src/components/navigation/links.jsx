@@ -1,5 +1,8 @@
 //  Import dependencies
 import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
 
 export default function Link({ obj })
 {
@@ -15,12 +18,14 @@ export default function Link({ obj })
         }
         {!obj.external &&
             
-                <a href={obj.link}>
+                <Link href={obj.link}>
                     <div className ='link-btn'>
                         {obj.name}
                     </div>
-                </a>
+                </Link>
         }
         </>
     );
 }
+
+// Define prop types for the component

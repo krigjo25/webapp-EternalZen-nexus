@@ -31,32 +31,36 @@ export default function Registration()
             {
                 value: '',
                 required: true,
-                cls: 'credential-field',
                 type: 'password',
                 name : 'password',                
+                cls: 'credential-field',
                 placeholder: 'E.G 12345678',
             },
             {
                 value: '',
                 required: true,
-                cls: 'credential-field',
                 type: 'password',
+                cls: 'credential-field',
                 name: 'confirm-password',
                 placeholder: 'E.G 12345678',
             },
             {
                 value: false,
-                type: 'checkbox',
                 required: true,
+                type: 'checkbox',
                 cls: 'control-field',
-                name: 'Agrees to the Terms Of Agreement',
+                href: '/termsofagreement',
+                name: 'Terms Of Agreement',
+                
             },
             {
                 value: false,
-                type: 'checkbox',
                 required: true,
+                type: 'checkbox',
                 cls: 'control-field',
-                name: 'Read Privacy Policy',
+                href: '/privacypolicy',
+                name: 'Our Privacy Policy',
+                
             }
  
         ],
