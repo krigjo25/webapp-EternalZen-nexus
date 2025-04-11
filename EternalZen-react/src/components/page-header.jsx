@@ -2,7 +2,7 @@
 
 //  Importing dependencies
 import { storeObject } from '../utils/stores.js';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 //  Importing components
 import Image from './misc/image.jsx';
@@ -99,13 +99,13 @@ function Header()
     
     return (
         <>
-            <div className='flex-wrap-row-justify-space-between'> 
-                <a href = "/">
+            <div className='flex-wrap-row-justify-center flex-wrap-row-align-items-center'> 
+                <Link to='/'>
                     <Image src = {logo.src} alt = {logo.alt} />
-                </a>
-                <a href='/'>
+                </Link>
+                <Link to='/'>
                     <h1>EternalZen - Logo</h1>
-                </a>
+                </Link>
                 <Navigation arg = {auth} cls = {"flex-wrap-row-justify-center"}/>
             </div>
             <Navigation arg = {headerBtn} cls = {"flex-wrap-row-justify-center"}/>

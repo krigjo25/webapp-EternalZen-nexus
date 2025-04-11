@@ -19,7 +19,7 @@ export default function InitializeForm(formData)
     return (
         <form className={formData.data.cls} action={formData.data.action} method={formData.data.method}>
             {(inputs) && ( 
-                <fieldset className={'flex-wrap-row ' + field.cls}>
+                <fieldset className={'flex-wrap-row-justify-center' + ' ' + field.cls}>
                     <legend className={field.legend.cls}>{field.legend.title}</legend>
                     {inputs.map((data, i) => {
                         return (
