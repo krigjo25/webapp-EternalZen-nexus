@@ -5,9 +5,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 //  Components
-import Btn from '../btn';
-
 import Input from './inputs';
+import Btn from '../misc/btn';
+
 
 export default function InitializeForm(formData)
 {
@@ -31,7 +31,7 @@ export default function InitializeForm(formData)
             )}
 
             {(btn) && (
-                <div className='flex-wrap-row-justify-space-evenly'>
+                <div className='flex-wrap-row-justify-space-evenly btn-container'>
                     {btn.map((data, i) => {
                         return (
                             <Btn key={i} btn = {data}/>

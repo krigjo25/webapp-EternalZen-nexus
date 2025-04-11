@@ -3,7 +3,7 @@
 //  Importing dependencies
 import React from 'react';
 //  Importing components
-import Form from '../components/misc/form/form';
+import RegistrationFrom from '../components/form/form';
 
 export default function Registration() 
 {
@@ -100,7 +100,7 @@ export default function Registration()
 
     return (
         <>
-        <Form data={formData} />
+        <RegistrationFrom data={formData} />
         </>
     );
 }
