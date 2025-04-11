@@ -1,3 +1,14 @@
+header nav div.link-btn {
+  padding: 0.6em;
+}
+header nav button:hover {
+  opacity: 0.8;
+}
+header nav button:focus, header nav button:focus-visible {
+  color: rgb(175, 238, 238);
+  background-color: rgb(32, 32, 32);
+}
+
 .justify-text-size {
   inline-size: 66vw;
   text-align: justify;
@@ -20,7 +31,7 @@ flex-row, .flex-row {
   flex-direction: row;
 }
 
-flex-wrap-row, .flex-wrap-row, .flex-wrap-row-align-items-end, .flex-wrap-row-justify-center, .flex-wrap-row-justify-space-around, .flex-wrap-row-justify-space-between, .flex-wrap-row-justify-space-evenly {
+flex-wrap-row, .flex-wrap-row, .flex-wrap-row-align-items-center, .flex-wrap-row-align-items-end, .flex-wrap-row-justify-center, .flex-wrap-row-justify-space-around, .flex-wrap-row-justify-space-between, .flex-wrap-row-justify-space-evenly {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -50,6 +61,10 @@ flex-wrap-reversed-row, .flex-wrap-reversed-row {
 
 .flex-wrap-row-align-items-end {
   align-items: flex-end;
+}
+
+.flex-wrap-row-align-items-center {
+  align-items: center;
 }
 
 flex-column, .flex-column-justify-space-between, .flex-column {
@@ -99,29 +114,27 @@ flex-wrap-reversed-column, .flex-wrap-reversed-column {
 
 main input[type=text] {
   padding-block: 1vh;
-  padding-inline-start: 5vw;
+  padding-inline-start: 2vw;
 }
 main input[type=password] {
   padding-block: 1vh;
-  padding-inline-start: 5vw;
+  padding-inline-start: 2vw;
 }
 main .input-container {
   padding: 1em;
+  inline-size: 14vw;
 }
 
 .label-checkbox {
   margin-start: 1em;
 }
 
-header nav div.link-btn {
-  padding: 0.6em;
+main form div {
+  inline-size: 45vw;
 }
-header nav button:hover {
-  opacity: 0.8;
-}
-header nav button:focus, header nav button:focus-visible {
-  color: rgb(175, 238, 238);
-  background-color: rgb(32, 32, 32);
+main form fieldset.field-control {
+  border: none;
+  inline-size: 34vw;
 }
 
 :root {
