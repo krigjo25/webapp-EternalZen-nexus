@@ -99,7 +99,7 @@ function Header()
     
     return (
         <>
-            <div className='flex-wrap-row-justify-center flex-wrap-row-align-items-center'> 
+            <div className='flex-wrap-row-justify-space-between flex-wrap-row-align-items-center'> 
                 <Link to='/'>
                     <Image src = {logo.src} alt = {logo.alt} />
                 </Link>

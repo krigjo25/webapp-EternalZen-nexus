@@ -14,7 +14,7 @@ import './assets/css/index.css';
 function App() {
   return (
     <>
-      <header className='flex-wrap-row-justify-space-between'>
+      <header className='flex-wrap-row-justify-center'>
         <Header />
       </header>
       <main className='flex-wrap-row-justify-center'>
