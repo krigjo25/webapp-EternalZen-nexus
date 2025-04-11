@@ -122,29 +122,27 @@ flex-wrap-reversed-column, .flex-wrap-reversed-column {
   justify-content: space-between;
 }
 
-main input[type=text] {
+main form {
+  inline-size: 40vw;
+}
+main form fieldset .field-control {
+  border: none;
+}
+main form fieldset div {
+  margin-block: 2vh;
+  margin-inline-start: 1vw;
+}
+main form input[type=text], main form input[type=password], main form input[type=email] {
   padding-block: 1vh;
+  margin-inline-start: 1vw;
   padding-inline-start: 2vw;
 }
-main input[type=password] {
-  padding-block: 1vh;
-  padding-inline-start: 2vw;
-}
-main .input-container {
+main form .input-container {
   padding: 1em;
   inline-size: 14vw;
 }
-
-.label-checkbox {
+main form label .label-checkbox {
   margin-start: 1em;
-}
-
-main form div {
-  inline-size: 45vw;
-}
-main form fieldset.field-control {
-  border: none;
-  inline-size: 34vw;
 }
 
 :root {
