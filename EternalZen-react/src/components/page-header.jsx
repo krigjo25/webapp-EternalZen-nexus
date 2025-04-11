@@ -35,29 +35,35 @@ function Header()
 
     //  Map the functions
     const mapData = {
+        
         0: () => aboutUs(),
         1: () => spirituality(),
         2: () => meditation(),
         3: () => affirmation(),
-        
+
         //  Authorization
         4: () => login(),
     };
 
     const handleData = (id) =>
         { 
-            //  Navigate home
-            navigate('/');
-
             //  Ensure the vailidity of the id
             const data = mapData[id];
-
-
-            //  Ensure that there is some mapped data to set
-            data ? setObject(data()) : console.warn(`No functions mapped for this id : ${id}`);
+            if (data)
+            {
+                //  Ensure that there is some mapped data to set
+                data
+                setObject(data());
+                navigate(data.link);
+            }
+            else
+            {
+                console.warn(`No functions mapped for this id : ${id}`);
+            }
+            
         }
 
-    const headerBtn =[
+    const headerNavigation =[
         {
             id : 0,
             type: "button",
@@ -108,7 +114,7 @@ function Header()
                 </Link>
                 <Navigation arg = {auth} cls = {"flex-wrap-row-justify-center"}/>
             </div>
-            <Navigation arg = {headerBtn} cls = {"flex-wrap-row-justify-center"}/>
+            <Navigation arg = {headerNavigation} cls = {"flex-wrap-row-justify-center"}/>
             
         </>
     )
@@ -120,8 +126,9 @@ function aboutUs()
 {
     
     const data = {
-        cls: "justify-text-size margin-inline-11",
+        link : '/',
         headline: "EternalZen & our philiosophy",
+        cls: "justify-text-size margin-inline-11",
 
         paragraphs:
         [
@@ -179,8 +186,10 @@ function spirituality()
 
     const data =
     { 
-        cls: "justify-text-size margin-inline-11",
+        link : '/',
         headline: "What is Spirituality?",
+        cls: "justify-text-size margin-inline-11",
+        
         paragraphs:
         [
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis porta dolor,
@@ -206,11 +215,12 @@ function spirituality()
 function meditation()
 {
 
-    let data =
+    const data =
     {
-        cls: "justify-text-size margin-inline-11",
+        link : '/',
         headline: "What is Meditation?",
-        
+        cls: "justify-text-size margin-inline-11",
+
         paragraphs: 
         [
             `Sed mattis facilisis pulvinar. Integer aliquam lacus id convallis lobortis. Vivamus vestibulum
@@ -235,10 +245,12 @@ function meditation()
 function affirmation()
 {
 
-    let data = 
+    const data = 
     {
-        cls: "justify-text-size margin-inline-11",
+        link : '/',
         headline: "What is Affirmation?",
+        cls: "justify-text-size margin-inline-11",
+
         paragraphs:
         [
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis porta dolor,
@@ -257,6 +269,11 @@ function affirmation()
 
 function login()
 {
+    const data = 
+    {
+        link: '/',
+    }
+
     return (`<form>
     <input type="text" name="username" placeholder="Username" required>
     <input type="password" name="password" placeholder="Password" required>

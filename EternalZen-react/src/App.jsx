@@ -1,4 +1,4 @@
-//  EternalZen App
+//  EternalZen Main App
 
 //  Importing necessary dependencies
 import React from 'react';
@@ -28,4 +28,5 @@ function App() {
   )
 }
 
+//  Exporting the App component
 export default App
