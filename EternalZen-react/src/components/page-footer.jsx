@@ -5,7 +5,8 @@ import Navigation from './navigation/navigation.jsx'
 
 function footer()
 {
-    const footerNav = [
+    const footerNav = 
+    [
         {
             id: 0,
             type: 'link',
@@ -32,15 +33,14 @@ function footer()
             type: 'link',
             external: false,
             name: 'Contact The Team',
-            link: 'contact-us',
+            link: '/contactus',
         },
     ]
     return (
     <>
-        <footer>
-            <Navigation arg = { footerNav } cls='flex-wrap-row' />
-        </footer>
-    </>)
+        <Navigation arg = { footerNav } cls={'flex-wrap-row-justify-space-evenly' + ' isp-100' } />
+    </>
+    )
 }
 
 //  Exporting the component
