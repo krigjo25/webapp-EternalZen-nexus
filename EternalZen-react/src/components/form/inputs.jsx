@@ -25,7 +25,7 @@ function formInput( { input, formID }) {
         <>
             {(input.type === types[0] || input.type === types[1]) &&  (
                 <div className='flex-wrap-column input-container'>
-
+                    
                     <label htmlFor = {input.name} className={" label-" + input.type} > 
                         {input.name}
                     </label>
@@ -49,6 +49,8 @@ function formInput( { input, formID }) {
             {( input.type == types[2] || input.type === types[3] ) && (
                 <div className='flex-wrap-row input-container'>
                     <div className='flex-wrap-row-justify-center'>
+                        
+                        
                         <input 
                                 form = {input.form}
                                 name = {input.name}

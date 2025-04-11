@@ -93,7 +93,9 @@ export default function Registration()
         method: 'post',
         action:'/tansfer-data.html',
         tile: 'Register an account',
-        cls: "flex-column-justify-space-between is-47",
+        btnText: '',
+        inputText: `<b>*</b> Required Fields`,
+        cls: "flex-column-justify-space-between",
         
         
     };
