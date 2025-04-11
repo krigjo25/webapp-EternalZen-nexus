@@ -97,9 +97,20 @@ flex-wrap-reversed-column, .flex-wrap-reversed-column {
   justify-content: space-between;
 }
 
-main input {
+main input[type=text] {
   padding-block: 1vh;
   padding-inline-start: 5vw;
+}
+main input[type=password] {
+  padding-block: 1vh;
+  padding-inline-start: 5vw;
+}
+main .input-container {
+  padding: 1em;
+}
+
+.label-checkbox {
+  margin-start: 1em;
 }
 
 header nav div.link-btn {
