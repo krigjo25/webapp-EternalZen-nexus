@@ -105,14 +105,14 @@ function Header()
     
     return (
         <>
-            <div className='flex-wrap-row-justify-space-between flex-wrap-row-align-items-center'> 
+            <div className='flex-wrap-row-justify-space-evenly flex-wrap-row-align-items-center logo'> 
                 <Link to='/'>
                     <Image src = {logo.src} alt = {logo.alt} />
                 </Link>
                 <Link to='/'>
                     <h1>EternalZen - Logo</h1>
                 </Link>
-                <Navigation arg = {auth} cls = {"flex-wrap-row-justify-center"}/>
+                <Navigation arg = {auth} cls = {'flex-wrap-row-justify-space-evenly header-nav'}/>
             </div>
             <Navigation arg = {headerNavigation} cls = {"flex-wrap-row-justify-center"}/>
             
