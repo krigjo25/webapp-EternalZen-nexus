@@ -26,6 +26,10 @@ header nav button:focus, header nav button:focus-visible {
   inline-size: 47vw;
 }
 
+.isp-100 {
+  inline-size: 100%;
+}
+
 flex-row, .flex-row {
   display: flex;
   flex-direction: row;
