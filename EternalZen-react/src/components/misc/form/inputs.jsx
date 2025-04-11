@@ -31,11 +31,11 @@ function formInput( { input, formID }) {
                     </label>
                     <input 
                         form = {formID}
-                        name = {input.name } 
-                        type = {input.type}
+                        name = {input.name? input.name : ""} 
+                        type = {input.type ? input.type : "text"}
                         onChange = {input.onChange} 
-                        placeholder = {input.placeholder}
-                        pattern = {input.regex? input.regex : false}
+                        placeholder = {input.placeholder ? input.placeholder : ""}
+                        pattern = {input.regex? input.regex : ""}
                         hidden = {input.hidden ? input.hidden : false}
                         autoFocus = {input.focus ? input.focus : 'off'}
                         disabled= {input.disabled ? input.disabled : false}
