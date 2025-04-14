@@ -6,11 +6,12 @@ import Link from './links.jsx'
 
 export default function Navigation({ arg, cls })
 {
-    const zero = 0;
+    const minLength = 0;
+
     return (
     <>
 
-        {arg && arg.length > zero }
+        {arg && arg.length > minLength }
             <nav className={cls}>
                 {arg && arg.map((object) => 
                 <>

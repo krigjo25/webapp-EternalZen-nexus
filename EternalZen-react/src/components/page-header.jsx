@@ -43,7 +43,6 @@ function Header()
             if (data)
             {
                 //  Ensure that there is some mapped data to set
-                data
                 setObject(data());
                 navigate(data.link);
             }

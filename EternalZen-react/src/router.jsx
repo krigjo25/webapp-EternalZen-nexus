@@ -9,12 +9,12 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import Loc from './pages/loc.jsx';
 import Pp from './pages/privacy-policy.jsx';
+import NotFound from './pages/not-found.jsx';
 import Main from './components/page-main.jsx';
 import Ctt from './pages/contact-the-team.jsx';
 import CopyNotes from './pages/copy-notes.jsx';
 import Toa from './pages/terms-of-agreement.jsx';
 import RegisterUser from './pages/authoricate-user.jsx';
-import NotFound from './pages/not-found.jsx';
 
 
 export const router = createBrowserRouter([
