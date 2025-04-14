@@ -5,6 +5,7 @@ import { storeObject } from '../utils/stores.js';
 import { Link, useNavigate } from 'react-router-dom';
 
 //  Importing components
+import Form from './form/form.jsx';
 import Image from './misc/image.jsx';
 import Navigation from './navigation/navigation.jsx';
 
@@ -18,17 +19,10 @@ function Header()
     //  Initalizing buttons, links & images
     const auth = [
         {
-            id : 0,
-            func : () => handleData(4),
-            name: 'Login',
-            type: 'button',
-            
-        },
-        {
             id : 1,
             type: 'link',
-            name: 'register',
-            link:'/user-registeration',
+            name: 'Sign-in/up',
+            link:'/user-authorization',
         },
 
     ];
@@ -40,9 +34,6 @@ function Header()
         1: () => spirituality(),
         2: () => meditation(),
         3: () => affirmation(),
-
-        //  Authorization
-        4: () => login(),
     };
 
     const handleData = (id) =>

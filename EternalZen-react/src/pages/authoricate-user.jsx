@@ -10,16 +10,6 @@ export default function Registration()
 
     //  Registering the user form
     const formData = {
-        field :
-        {
-            cls: 'field-control',
-            legend: 
-            {
-                cls: 'user-credential',
-                title: 'Register an account',
-                
-            },
-        },
         inputs: [
             {
                 value: '',
@@ -88,21 +78,77 @@ export default function Registration()
             },
 
         ],
+        data :
+        {
+            id : 0,
+            method: 'post',
+            action:'/tansfer-data.html',
+            tile: 'Register an account',
+            cls: "flex-column-justify-space-between",
 
-        id : 0,
-        method: 'post',
-        action:'/tansfer-data.html',
-        tile: 'Register an account',
-        btnText: '',
-        inputText: `<b>*</b> Required Fields`,
-        cls: "flex-column-justify-space-between",
-        
-        
+            field :
+            {
+                cls: 'field-control',
+                text: `<b>*</b> Required Fields`,
+                legend: 
+                {
+                    cls: 'user-credential',
+                    title: 'Register an account',
+                    
+                },
+            },
+        },
     };
+    const loginData = 
+        {
+            data: {
+                id: 1,
+                cls: 'flex-wrap-column-justify-space-evenly',
+                action: '/user-login',
+                method: 'POST',
+                field: {
+                    cls: 'flex-wrap-column-justify-center',
+                    legend: {
+                        title: 'Login',
+                        cls: 'flex-wrap-row-justify-center',
+                    },
+                },
+            },
+            inputs: [
+                {
+                    type: 'text',
+                    hidden: true,
+                    required: true,
+                    name: 'username',
+                    placeholder: 'E.G Jhon',
+                },
+                {
+                    hidden: true,
+                    required: true,
+                    type: 'password',
+                    name: 'password',
+                    placeholder: '123456789',
+                },
+            ],
+            btn:
+            [
+                {
+                    type: 'submit',
+                    cls: 'submit-btn',
+                    name: 'Login',
+                },
+                {
+                    type: 'reset',
+                    cls: 'reset-btn',
+                    name: 'Reset Form',
+                },
+            ],
+        };
 
     return (
         <>
-        <RegistrationFrom data={formData} />
+        <RegistrationFrom formData={formData} />
+        <RegistrationFrom formData={loginData} />
         </>
     );
 }

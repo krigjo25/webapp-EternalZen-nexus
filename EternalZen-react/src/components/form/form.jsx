@@ -12,45 +12,48 @@ import Btn from '../misc/btn';
 export default function InitializeForm(formData)
 {
     //  Destructuring the formData object
-    const btn = formData.data.btn;
-    const formID = formData.data.id;
-    const field = formData.data.field;
-    const inputs = formData.data.inputs;
-    const btnText = formData.data.btnText;
-    const inputText = formData.data.inputText;
+        
+    const btn = formData.formData.btn;
+    const data = formData.formData.data;
+    const inputs = formData.formData.inputs;
+
+    const field = data.field;
+
+    console.log(btn);
+    console.log(data);
+    console.log(inputs);
+
+    const formID = data.id;
     
-
     return (
-        <form className={formData.data.cls} action={formData.data.action} method={formData.data.method}>
-            
-            {(inputs) && ( 
-                
-                <fieldset className={'flex-wrap-column-justify-center' + ' ' + field.cls}>
-                    <legend className={field.legend.cls}>{field.legend.title}</legend>
-                    <p>{inputText ? inputText : ""}</p>
-                    <div className='flex-wrap-row-justify-space-evenly'>
-                        {inputs.map((data, i) => {
-                            return (
-                                <Input key={i} input={ data } formID ={ formData.data.id } />
+        <>
+            { inputs.hidden != true &&
+                <form className={data.cls} action={data.action} method={data.method}>
+                    <fieldset className={'flex-wrap-column-justify-center' + ' ' + field.cls}>
+                        <legend className={field.legend.cls}>{field.legend.title}</legend>
+                        <p>{field.text ? field.text : ""}</p>
+                        <div className='flex-wrap-row-justify-space-evenly'>
+                            {inputs.map((data, i) => {
+                                return (
+                                    <Input key={i} input={ data } formID ={ formID } />
                                 )},
-                                
+                                    
                             )}
-                    </div>
-                </fieldset>
-            )}
+                        </div>
+                    </fieldset>
 
-            {(btn) && (
-                <>
-                    <p>{btnText ? btnText : ""}</p>
-                    <div className='flex-wrap-row-justify-space-evenly btn-container'>
-                        {btn.map((data, i) => {
-                            return (
-                                <Btn key={i} btn = {data}/>
-                        )})}
-                    </div>
-                </>
-        )}
-        </form>
+                    {(btn) && (
+                        <div className='flex-wrap-row-justify-space-evenly btn-container'>
+                            {btn.map((data, i) => {
+                                return (
+                                    <Btn key={i} btn = {data}/>
+                                )})}
+                        </div>
+                    )}
+                </form>
+            }
+            
+        </>
     )
 }
 
@@ -58,7 +61,19 @@ export default function InitializeForm(formData)
 InitializeForm.propTypes = 
 {
     data: PropTypes.shape({
-        
+        data : {
+            id: PropTypes.number.isRequired,
+            method: PropTypes.string.isRequired,
+            action: PropTypes.string.isRequired,
+            cls: PropTypes.string.isRequired,
+            field: PropTypes.shape({
+                cls: PropTypes.string.isRequired,
+                legend: PropTypes.shape({
+                    cls: PropTypes.string.isRequired,
+                    title: PropTypes.string.isRequired,
+                }).isRequired,
+            }).isRequired,
+        },
         inputs: PropTypes.arrayOf(
             PropTypes.shape({
                 type: PropTypes.string.isRequired,
@@ -73,10 +88,5 @@ InitializeForm.propTypes =
             cls: PropTypes.string.isRequired,
             name: PropTypes.string.isRequired,
         })).isRequired,
-
-        cls: PropTypes.string.isRequired,
-        tile: PropTypes.string.isRequired,
-        action: PropTypes.string.isRequired,
-        method: PropTypes.string.isRequired,
     })
 };
