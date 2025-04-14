@@ -15,6 +15,18 @@ header nav button:focus, header nav button:focus-visible {
   background-color: rgb(32, 32, 32);
 }
 
+main nav button.btn-credential {
+  outline: none;
+}
+main nav button.btn-credential:hover {
+  border: none;
+  border-bottom: 0.3em solid #535bf2;
+}
+main nav button.btn-credential:focus {
+  border: none;
+  border-left: 0.3em solid #ffffff;
+}
+
 .justify-text-size {
   inline-size: 66vw;
   text-align: justify;
