@@ -27,32 +27,27 @@ export default function InitializeForm(formData)
     
     return (
         <>
-            { inputs.hidden != true &&
-                <form className={data.cls} action={data.action} method={data.method}>
-                    <fieldset className={'flex-wrap-column-justify-center' + ' ' + field.cls}>
-                        <legend className={field.legend.cls}>{field.legend.title}</legend>
-                        <p>{field.text ? field.text : ""}</p>
-                        <div className='flex-wrap-row-justify-space-evenly'>
-                            {inputs.map((data, i) => {
-                                return (
-                                    <Input key={i} input={ data } formID ={ formID } />
-                                )},
-                                    
-                            )}
-                        </div>
-                    </fieldset>
+            <form className={data.cls} action={data.action} method={data.method}>
+                <fieldset className={'flex-wrap-column-justify-center' + ' ' + field.cls}>
+                    <legend className={field.legend.cls}>{field.legend.title}</legend>
+                    <p>{field.text ? field.text : ""}</p>
+                    <div className='flex-wrap-row-justify-space-evenly'>
+                        {inputs.map((data, i) => {
+                            return (
+                                <Input key={i} input={ data } formID ={ formID } />
+                            )})}
+                    </div>
+                </fieldset>
 
-                    {(btn) && (
-                        <div className='flex-wrap-row-justify-space-evenly btn-container'>
-                            {btn.map((data, i) => {
-                                return (
-                                    <Btn key={i} btn = {data}/>
-                                )})}
-                        </div>
-                    )}
-                </form>
-            }
-            
+                {(btn) && (
+                    <div className='flex-wrap-row-justify-space-evenly btn-container'>
+                        {btn.map((data, i) => {
+                            return (
+                                <Btn key={i} btn = {data}/>
+                            )})}
+                    </div>
+                )}
+            </form>
         </>
     )
 }
