@@ -97,24 +97,23 @@ export default function Registration()
         [
             {
                 id: 0,
-                cls: 'btn',
                 name: 'Login',
                 type: 'button',
+                cls: 'btn-credential',
                 func:() => handleData(0),
             },
             {
                 id: 1,
-                cls: 'btn',
                 type: 'button',
                 name: 'Register',
-                href: '/register',
+                cls: 'btn-credential',
                 func: () => handleData(1),
             }
         ]
     return (
         <>
         <div className='credential-form'>
-            <Navigation arg = { navigationData }/>
+            <Navigation arg = { navigationData } />
             <div className={formData.data.cls}>
                 <RegistrationFrom formData={formData} />
             </div>
