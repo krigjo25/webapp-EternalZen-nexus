@@ -1,13 +1,14 @@
 //  EternalZen header content
 
 //  Importing dependencies
+import { useState } from 'react';
 import { storeObject } from '../utils/stores.js';
 import { Link, useNavigate } from 'react-router-dom';
 
 //  Importing components
-import Form from './form/form.jsx';
 import Image from './misc/image.jsx';
 import Navigation from './navigation/navigation.jsx';
+import RegistrationFrom from '../pages/authoricate-user.jsx';
 
 
 function Header()
@@ -19,10 +20,10 @@ function Header()
     //  Initalizing buttons, links & images
     const auth = [
         {
-            id : 1,
-            type: 'link',
+            id : 5,
+            type: 'button',
             name: 'Sign-in/up',
-            link:'/user-authorization',
+            func: () => authorizationForm(),
         },
 
     ];
@@ -40,6 +41,7 @@ function Header()
         { 
             //  Ensure the vailidity of the id
             const data = mapData[id];
+            console.log(data);
             if (data)
             {
                 //  Ensure that there is some mapped data to set
@@ -92,7 +94,7 @@ function Header()
         src:'EternalZenLogo.svg',
         alt:'EternalZenLogo.svg',
     }
-    
+
     return (
         <>
             <div className='flex-wrap-row-justify-space-evenly flex-wrap-row-align-items-center logo'> 
@@ -105,7 +107,6 @@ function Header()
                 <Navigation arg = {auth} cls = {'flex-wrap-row-justify-space-evenly header-nav'}/>
             </div>
             <Navigation arg = {headerNavigation} cls = {"flex-wrap-row-justify-center"}/>
-            
         </>
     )
 
@@ -257,18 +258,19 @@ function affirmation()
     return data;
 }
 
-function login()
+function authorizationForm()
 {
-    const data = 
-    {
-        link: '/',
+    const data = {
+        userAuthoricate : true
     }
+    let modal = document.querySelector('#modal');
+    let header = document.querySelector('header');
+    let footer = document.querySelector('footer');
 
-    return (`<form>
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <button type="submit">Login</button>
-    </form>`);
+    footer.classList.toggle('blur');
+    header.classList.toggle('blur');
+
+    return data
 }
 
 //  Exporting the component

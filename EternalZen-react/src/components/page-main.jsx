@@ -4,15 +4,18 @@
 import Article from './misc/article.jsx';
 import { storeObject } from '../utils/stores.js';
 
-export default function index()
-{
-    const {object, setObject, clearData} = storeObject();
+//  Importing components
+import UserAuthorization from '../pages/authoricate-user.jsx';
 
-    
+
+export default function main()
+{
+    const {object, setObject, clearObject} = storeObject();
+
     return (
         <>
         {object ? (<Article article = {object}/>) : null}
-        
+        <UserAuthorization />
         </>
         
     );

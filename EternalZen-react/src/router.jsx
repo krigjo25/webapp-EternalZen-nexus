@@ -27,9 +27,6 @@ export const router = createBrowserRouter([
                 index: true, element: <Main />
             },
             {
-                path:'user-authorization', element: <RegisterUser />
-            },
-            {
                 path: 'loc', element: <Loc />
             },
             {

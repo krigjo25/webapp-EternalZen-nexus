@@ -26,6 +26,17 @@ main nav button.btn-credential:focus {
   border: none;
   border-left: 0.3em solid #ffffff;
 }
+main .modal {
+  z-index: 1;
+  opacity: 0.3;
+  display: none;
+  overflow: auto;
+  position: fixed;
+  block-size: 100%;
+  inline-size: 100%;
+  filter: blur(5px);
+  background-color: rgb(245, 245, 245);
+}
 
 .justify-text-size {
   inline-size: 66vw;
@@ -46,6 +57,33 @@ main nav button.btn-credential:focus {
 
 .isp-100 {
   inline-size: 100%;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+#modal {
+  z-index: 1;
+  opacity: 0.3;
+  display: none;
+  overflow: auto;
+  position: fixed;
+  block-size: 100%;
+  inline-size: 100%;
+  background-color: rgb(33, 33, 33);
+}
+
+.show {
+  display: block !important;
+}
+
+.modal-content {
+  inline-size: 40vw;
+  background-color: #010000;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
 }
 
 flex-row, .flex-row {
@@ -135,7 +173,7 @@ flex-wrap-reversed-column, .flex-wrap-reversed-column {
 }
 
 main form {
-  inline-size: 40vw;
+  inline-size: 100%;
 }
 main form fieldset .field-control {
   border: none;

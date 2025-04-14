@@ -9,7 +9,6 @@ import Navigation from '../components/navigation/navigation';
 
 export default function Registration() 
 {
-
     //  Registering the user form
     const [formData, setFormData] = useState(
             {
@@ -68,8 +67,6 @@ export default function Registration()
                     },
                 ],
         });
-    
-
     const mapData =
     {
         0: () => loginForm(),
@@ -110,14 +107,18 @@ export default function Registration()
                 func: () => handleData(1),
             }
         ]
+    
     return (
         <>
-        <div className='credential-form'>
-            <Navigation arg = { navigationData } />
-            <div className={formData.data.cls}>
-                <RegistrationFrom formData={formData} />
+            <div id='modal-box' className='open'>
+                <div className='modal-content'>
+                    <Navigation arg = { navigationData } />
+                    <div className={formData.data.cls}>
+                        <RegistrationFrom formData={formData} />
+                    </div>
+                </div>
             </div>
-        </div>
+
         </>
     );
 };
@@ -166,6 +167,7 @@ function loginForm()
             },
         ],
     }
+    
 
     return data    
 };
