@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header .logo {
   inline-size: 100%;
 }
@@ -26,16 +27,33 @@ main nav button.btn-credential:focus {
   border: none;
   border-left: 0.3em solid #ffffff;
 }
-main .modal {
+main #model-box {
   z-index: 1;
-  opacity: 0.3;
   display: none;
   overflow: auto;
   position: fixed;
-  block-size: 100%;
-  inline-size: 100%;
-  filter: blur(5px);
-  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  background-color: black;
+}
+main .model-content {
+  inline-size: 43vw;
+  padding-block: 2vh;
+  padding-inline: 2vw;
+}
+main .model-content button.close-btn:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "❌";
+  font-size: 50px;
+  color: #FFF;
+  line-height: 100px;
+  text-align: center;
+}
+main .open {
+  display: block !important;
 }
 
 .justify-text-size {
@@ -63,7 +81,7 @@ main .modal {
   filter: blur(5px);
 }
 
-#modal {
+#modal-box {
   z-index: 1;
   opacity: 0.3;
   display: none;
@@ -180,7 +198,6 @@ main form fieldset .field-control {
 }
 main form fieldset div {
   margin-block: 2vh;
-  margin-inline-start: 1vw;
 }
 main form input[type=text], main form input[type=password], main form input[type=email] {
   padding-block: 1vh;
@@ -189,10 +206,12 @@ main form input[type=text], main form input[type=password], main form input[type
 }
 main form .input-container {
   padding: 1em;
-  inline-size: 14vw;
 }
 main form label .label-checkbox {
   margin-start: 1em;
+}
+main form .button-container {
+  padding-block: 1em;
 }
 
 :root {

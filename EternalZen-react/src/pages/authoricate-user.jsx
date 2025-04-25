@@ -67,6 +67,7 @@ export default function Registration()
                     },
                 ],
         });
+    //  Function to handle the form data
     const mapData =
     {
         0: () => loginForm(),
@@ -110,14 +111,15 @@ export default function Registration()
     
     return (
         <>
-            <div id='modal-box' className='open'>
-                <div className='modal-content'>
+            <section id='model-box' className=''>
+                <section className='model-content'>
+                    <button className ="close-btn"></button>
                     <Navigation arg = { navigationData } />
-                    <div className={formData.data.cls}>
+                    <section className={formData.data.cls}>
                         <RegistrationFrom formData={formData} />
-                    </div>
-                </div>
-            </div>
+                    </section>
+                </section>
+            </section>
 
         </>
     );

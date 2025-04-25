@@ -261,12 +261,18 @@ function authorizationForm()
     const data = {
         userAuthoricate : true
     }
-    let modal = document.querySelector('#modal');
-    let header = document.querySelector('header');
-    let footer = document.querySelector('footer');
+    
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    const article = document.querySelector('article');
+    const modal = document.querySelector('#model-box');
 
+    modal.classList.toggle('open');
     footer.classList.toggle('blur');
     header.classList.toggle('blur');
+    article.classList.toggle('blur');
+    
+
 
     return data
 }

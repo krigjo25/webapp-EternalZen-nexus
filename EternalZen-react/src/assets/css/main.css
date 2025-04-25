@@ -1,0 +1,40 @@
+@charset "UTF-8";
+main nav button.btn-credential {
+  outline: none;
+}
+main nav button.btn-credential:hover {
+  border: none;
+  border-bottom: 0.3em solid #535bf2;
+}
+main nav button.btn-credential:focus {
+  border: none;
+  border-left: 0.3em solid #ffffff;
+}
+main #model-box {
+  z-index: 1;
+  display: none;
+  overflow: auto;
+  position: fixed;
+  border-radius: 10px;
+  background-color: black;
+}
+main .model-content {
+  inline-size: 43vw;
+  padding-block: 2vh;
+  padding-inline: 2vw;
+}
+main .model-content button.close-btn:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "❌";
+  font-size: 50px;
+  color: #FFF;
+  line-height: 100px;
+  text-align: center;
+}
+main .open {
+  display: block !important;
+}/*# sourceMappingURL=main.css.map */

@@ -1,3 +1,4 @@
+@import colors
 main
     nav
         button.btn-credential
@@ -10,16 +11,30 @@ main
                 &:focus
                     border: none
                     border-left: 0.3em solid #ffffff
-    .modal
+    #model-box
         z-index: 1
-        opacity: .3
         display: none
         overflow: auto
         position: fixed
-        block-size: 100%
-        inline-size: 100%
-        filter: blur(5px)
-        background-color: $bg-light
-        
-                
-                
+        border-radius: 10px
+        background-color: black//$bg-light
+
+    .model-content
+        inline-size: 43vw
+        padding-block: 2vh
+        padding-inline: 2vw
+    
+        button.close-btn:after
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            content: "\274c" /* use the hex value here... */
+            font-size: 50px 
+            color: #FFF
+            line-height: 100px
+            text-align: center
+
+    .open
+        display: block !important
