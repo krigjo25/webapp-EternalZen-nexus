@@ -14,7 +14,6 @@ import Main from './components/page-main.jsx';
 import Ctt from './pages/contact-the-team.jsx';
 import CopyNotes from './pages/copy-notes.jsx';
 import Toa from './pages/terms-of-agreement.jsx';
-import RegisterUser from './pages/authoricate-user.jsx';
 
 
 export const router = createBrowserRouter([

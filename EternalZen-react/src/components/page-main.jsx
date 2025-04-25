@@ -5,7 +5,7 @@ import Article from './misc/article.jsx';
 import { storeObject } from '../utils/stores.js';
 
 //  Importing components
-import UserAuthorization from '../pages/authoricate-user.jsx';
+import UserAuthorization from '../components/misc/authoricate-user.jsx';
 
 
 export default function main()

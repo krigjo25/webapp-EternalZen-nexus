@@ -3,10 +3,11 @@
 //  Importing dependencies
 import React, { useState } from 'react';
 
-//  Importing components
-import RegistrationFrom from '../components/form/form';
 
-import Navigation from '../components/navigation/navigation';
+//  Importing components
+import RegistrationFrom from '../form/form';
+
+import Navigation from '../navigation/navigation';
 
 export default function Registration() 
 {
@@ -114,7 +115,7 @@ export default function Registration()
     
     return (
         <>
-            <section id='model-box' className=''>
+            <section id='model-box'>
                 <section className='model-content'>
                     <button className ="close-btn"></button>
                     <Navigation arg = { navigationData } />

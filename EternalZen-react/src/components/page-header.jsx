@@ -8,7 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 //  Importing components
 import Image from './misc/image.jsx';
 import Navigation from './navigation/navigation.jsx';
-import RegistrationFrom from '../pages/authoricate-user.jsx';
+import RegistrationFrom from './misc/authoricate-user.jsx';
 
 
 function Header()
@@ -47,6 +47,7 @@ function Header()
                 //  Ensure that there is some mapped data to set
                 setObject(data());
                 navigate(data.link);
+                console.log(data.link);
             }
             else
             {
