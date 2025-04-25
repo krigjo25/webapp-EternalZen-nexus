@@ -4,5 +4,12 @@ import React from "react";
 export default function Button({btn})
 {
     return (
-        <button onClick={btn.func}>{btn.name}</button>);
+        <button
+            type={btn.type}
+            onClick={btn.func}
+            className = {btn.cls} 
+            
+                >
+                {btn.name}
+        </button>);
 }

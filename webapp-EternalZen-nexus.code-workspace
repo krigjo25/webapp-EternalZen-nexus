@@ -4,5 +4,14 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveSassCompile.settings.formats": [
+			{
+				"format": "expanded",
+				"extensionName": ".css",
+				"savePath": "/EternalZen-react/src/assets/css"
+			}
+		],
+		"pomodoro.soundIntervalNotification": 100
+	}
 }

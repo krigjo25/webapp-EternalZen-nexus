@@ -1,0 +1,62 @@
+//  main sass file
+
+//  Importing dependencies
+@import fonts, colors, header, main, footer
+@import misc/misc, flexbox/flexbox, form/form-control
+
+:root 
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif 
+    line-height: 1.5
+    font-weight: 400
+    font-synthesis: none
+    color-scheme: light dark 
+    color: $font-lavendel-dark
+    background-color: $bg-dark
+    -moz-osx-font-smoothing: grayscale
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+
+a
+    margin :.3em
+    font-weight: 500 
+    text-decoration: inherit
+    color: $color-element-focus-dark
+
+    &:hover
+        color: #535bf2 
+        color: #747bff 
+
+body 
+    margin: 0
+    display: flex
+    min-width: 320px
+    min-height: 100vh
+
+h1 
+    font-size: 3.2em 
+    line-height: 1.1
+
+button
+    margin: .2em
+    font-size: 1em
+    cursor: pointer
+    font-weight: 500
+    border-radius: 8px
+    font-family: inherit
+    padding: 0.6em 1.2em
+    color: $btn-color-dark
+    background-color: $bg-dark
+    transition: border-color 0.25s
+    border: 1px solid transparent
+
+    &:hover 
+        border-color: #646cff
+        background-color: $btn-hover-dark
+
+    &:focus, &:focus-visible
+        outline: 4px auto $color-element-focus-dark
+
+@media (prefers-color-scheme &: light)
+    :root
+        color: #213547 
+        background-color: $font-light-dark 

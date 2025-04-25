@@ -1,39 +1,36 @@
-//  EternalZen header
+//  EternalZen header content
+
 //  Importing dependencies
 import { useState } from 'react';
 import { storeObject } from '../utils/stores.js';
-
+import { Link, useNavigate } from 'react-router-dom';
 
 //  Importing components
-import Article from './page-main.jsx';
 import Image from './misc/image.jsx';
 import Navigation from './navigation/navigation.jsx';
+import RegistrationFrom from '../pages/authoricate-user.jsx';
 
 
 function Header()
 {
+    //  Importing Hooks
+    const navigate = useNavigate();
     const { setObject } = storeObject()
+    
     //  Initalizing buttons, links & images
     const auth = [
         {
-            id : 0,
-            
-            func : login,
-            name: 'Login',
+            id : 5,
             type: 'button',
-            
-        },
-        {
-            id : 1,
-            type: 'link',
-            name: "register",
-            link:"register page",
+            name: 'Sign-in/up',
+            func: () => authorizationForm(),
         },
 
     ];
 
     //  Map the functions
     const mapData = {
+        
         0: () => aboutUs(),
         1: () => spirituality(),
         2: () => meditation(),
@@ -42,12 +39,23 @@ function Header()
 
     const handleData = (id) =>
         { 
+            //  Ensure the vailidity of the id
             const data = mapData[id];
-            //  Ensure that there is some mapped data to set
-            data ? setObject(data()) : console.warn(`No functions mapped for this id : ${id}`);
+            console.log(data);
+            if (data)
+            {
+                //  Ensure that there is some mapped data to set
+                setObject(data());
+                navigate(data.link);
+            }
+            else
+            {
+                console.warn(`No functions mapped for this id : ${id}`);
+            }
+            
         }
 
-    const headerNav =[
+    const headerNavigation =[
         {
             id : 0,
             type: "button",
@@ -76,8 +84,8 @@ function Header()
             id : 4,
             type: "link",
             external : false,
+            link: '/calibrations',
             name: 'David R. Hawkings\'s Calibrations of consiousness',
-            link: '',
         },
     ];
 
@@ -86,29 +94,34 @@ function Header()
         src:'EternalZenLogo.svg',
         alt:'EternalZenLogo.svg',
     }
-    
+
     return (
         <>
-            <div className='top flex-wrap-row-justify-center'> 
-                <Image src = {logo.src} alt = {logo.alt} />
-                <h1>EternalZen - Logo</h1>
-                <Navigation arg = {auth} cls = {"flex-wrap-row"}/>
-            
+            <div className='flex-wrap-row-justify-space-evenly flex-wrap-row-align-items-center logo'> 
+                <Link to='/'>
+                    <Image src = {logo.src} alt = {logo.alt} />
+                </Link>
+                <Link to='/'>
+                    <h1>EternalZen - Logo</h1>
+                </Link>
+                <Navigation arg = {auth} cls = {'flex-wrap-row-justify-space-evenly header-nav'}/>
             </div>
-            <Navigation arg = {headerNav} cls = {"flex-wrap-row-justify-space-evenly"}/>
-            
+            <Navigation arg = {headerNavigation} cls = {"flex-wrap-row-justify-center"}/>
         </>
     )
 
 }
 
-
 function aboutUs()
 
 {
+    
     const data = {
-        headline: "About EternalZen & our philiosophy",
-        text:
+        link : '/',
+        headline: "EternalZen & our philiosophy",
+        cls: "justify-text-size margin-inline-11",
+
+        paragraphs:
         [
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis porta dolor,
             ut scelerisque ex accumsan sed. Suspendisse id mauris a ex volutpat porttitor vel aliquet lacus.
@@ -160,10 +173,13 @@ function aboutUs()
 
 function spirituality()
 {
-    const data  = 
-    {
-        headline: "What Is Spirituality Defined As",
-        text: 
+    const data =
+    { 
+        link : '/',
+        headline: "What is Spirituality?",
+        cls: "justify-text-size margin-inline-11",
+        
+        paragraphs:
         [
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis porta dolor,
             ut scelerisque ex accumsan sed. Suspendisse id mauris a ex volutpat porttitor vel aliquet lacus.
@@ -179,19 +195,22 @@ function spirituality()
             id pretium ligula rhoncus. Maecenas a diam sem. Morbi ullamcorper feugiat pharetra. Duis gravida
             ante accumsan pulvinar faucibus. Donec eu nulla eu nulla accumsan sagittis. Maecenas ac eros non
             elit tempor maximus. Nulla mollis, odio sed consequat tempus, mi dui tincidunt felis, at cursus
-            mauris massa sed augue. Aenean vulputate iaculis ligula ut luctus. Mauris id molestie sem.`,
+            mauris massa sed augue. Aenean vulputate iaculis ligula ut luctus. Mauris id molestie sem.`
         ]
-    }
-
+}
     return data;
 }
+
 function meditation()
 {
 
-    const data = 
+    const data =
     {
-        headline:"",
-        text: 
+        link : '/',
+        headline: "What is Meditation?",
+        cls: "justify-text-size margin-inline-11",
+
+        paragraphs: 
         [
             `Sed mattis facilisis pulvinar. Integer aliquam lacus id convallis lobortis. Vivamus vestibulum
             scelerisque metus, quis semper nisl placerat vitae. Nullam sodales eros a quam tincidunt tempus.
@@ -206,37 +225,51 @@ function meditation()
             nunc mi vestibulum lectus, non lobortis leo magna ut magna. Fusce interdum massa sed
             placerat egestas. Praesent scelerisque facilisis odio, et mollis quam luctus quis.
             Mauris at aliquam enim, non lobortis risus. Aenean suscipit quam at quam facilisis
-            elementum. Nam sed condimentum metus. Cras semper eget neque eu sollicitudin.`,
-        ]
+            elementum. Nam sed condimentum metus. Cras semper eget neque eu sollicitudin.`
+        ],
     }
     return data;
 }
+
 function affirmation()
 {
 
     const data = 
     {
-        headline:"",
-        text: 
+        link : '/',
+        headline: "What is Affirmation?",
+        cls: "justify-text-size margin-inline-11",
+
+        paragraphs:
         [
             `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis porta dolor,
-            ut scelerisque ex accumsan sed. Suspendisse id mauris a ex volutpat porttitor vel aliquet lacus.
-            Quisque vestibulum rutrum placerat. Mauris interdum turpis lacus, et interdum tortor imperdiet a.
-            Pellentesque rutrum leo bibendum sodales commodo. Morbi magna mi, sollicitudin sed consectetur at,
-            molestie sit amet nisi. Nullam nisl velit, finibus in lectus a, dapibus porttitor leo.
-            Sed at sapien nec magna placerat facilisis. Donec posuere dictum semper. Ut non dui eget diam sollicitudin iaculis.
-            Duis libero massa, gravida vel rhoncus sit amet, gravida in enim. Donec orci nibh, pulvinar sit amet quam vel,
-            lacinia mattis purus. In tempus, est eget feugiat malesuada, mauris ante efficitur dolor,
-            sit amet viverra neque lacus at orci. Etiam lacinia massa a est tincidunt egestas.`,
-        ]
+        ut scelerisque ex accumsan sed. Suspendisse id mauris a ex volutpat porttitor vel aliquet lacus.
+        Quisque vestibulum rutrum placerat. Mauris interdum turpis lacus, et interdum tortor imperdiet a.
+        Pellentesque rutrum leo bibendum sodales commodo. Morbi magna mi, sollicitudin sed consectetur at,
+        molestie sit amet nisi. Nullam nisl velit, finibus in lectus a, dapibus porttitor leo.
+        Sed at sapien nec magna placerat facilisis. Donec posuere dictum semper. Ut non dui eget diam sollicitudin iaculis.
+        Duis libero massa, gravida vel rhoncus sit amet, gravida in enim. Donec orci nibh, pulvinar sit amet quam vel,
+        lacinia mattis purus. In tempus, est eget feugiat malesuada, mauris ante efficitur dolor,
+        sit amet viverra neque lacus at orci. Etiam lacinia massa a est tincidunt egestas.`
+    ]
     }
-
     return data;
 }
 
-function login()
+function authorizationForm()
 {
-    return 
+    const data = {
+        userAuthoricate : true
+    }
+    let modal = document.querySelector('#modal');
+    let header = document.querySelector('header');
+    let footer = document.querySelector('footer');
+
+    footer.classList.toggle('blur');
+    header.classList.toggle('blur');
+
+    return data
 }
 
+//  Exporting the component
 export default Header

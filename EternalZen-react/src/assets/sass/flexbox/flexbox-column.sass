@@ -1,0 +1,31 @@
+flex-column
+    display: flex
+    flex-direction: column
+
+flex-wrap-column
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+
+flex-wrap-reversed-column
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column-reverse
+
+.flex-wrap-column-align-content-center
+    align-content: center
+    @extend flex-wrap-column
+
+.flex-wrap-column-align-items-center
+    align-items: center
+    @extend flex-wrap-column
+
+.flex-wrap-column-align-content-space-between
+    align-content: space-between
+    @extend flex-wrap-column
+
+.flex-wrap-column-justify-space-between
+    @extend flex-wrap-column
+    justify-content: space-between
+    
+    

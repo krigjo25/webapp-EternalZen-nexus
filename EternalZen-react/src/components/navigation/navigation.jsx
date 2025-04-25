@@ -6,17 +6,17 @@ import Link from './links.jsx'
 
 export default function Navigation({ arg, cls })
 {
-    const zero = 0;
+    const minLength = 0;
+
     return (
     <>
 
-        {arg && arg.length > zero }
+        {arg && arg.length > minLength }
             <nav className={cls}>
                 {arg && arg.map((object) => 
                 <>
                     {object.type == "button" && (<Btn key = {object.id} btn = {object} />)}
-                    {object.type == "link" && (<Link key = {object.id} obj = {object} />)}
-                
+                    {object.type == "link" && (<Link key = {object.id} obj = {object} />)}         
                 </>
                 )}
             </nav>

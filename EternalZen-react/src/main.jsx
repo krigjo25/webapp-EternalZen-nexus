@@ -1,28 +1,21 @@
 //  Main.jsx
 
 //  Import dependencies
-import { StrictMode, useState } from 'react';
+import { StrictMode } from 'react';
+import { router } from './router.jsx';
 import { createRoot } from 'react-dom/client';
+import { RouterProvider } from 'react-router-dom';
 
 //  Import CSS
-import './index.css';
+import './assets/css/index.css';
 
 //  Importing components
-import Header from './components/page-header.jsx';
-import Footer from './components/page-footer.jsx';
-import Main from './components/page-main.jsx';
-
+import App from './App.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <header>
-      <Header />
-    </header>
-    <main>
-      <Main />
-    </main>
-    <footer>
-      <Footer />
-    </footer>
+    <RouterProvider router={router}>
+      <App />
+    </RouterProvider>
   </StrictMode>,
 )

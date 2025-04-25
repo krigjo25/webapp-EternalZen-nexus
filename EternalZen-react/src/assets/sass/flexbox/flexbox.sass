@@ -1,0 +1,40 @@
+//  Flexbox styles
+
+//  Importing dependencies
+@import flexbox-row, flexbox-column
+
+// Flexbox variables
+%flex-box
+    display: flex
+//  Flexbox row classes / styles
+.flex-justify-center
+    @extend %flex-box
+    justify-content: center
+
+    
+.flex-row 
+    @extend flex-row
+
+.flex-wrap-row
+    @extend flex-wrap-row
+
+.flex-wrap-reversed-row
+    @extend flex-wrap-reversed-row
+
+
+.flex-column
+    @extend flex-column
+
+.flex-column-justify-space-between
+    @extend flex-column
+    justify-content: space-between
+    
+.flex-wrap-column
+    @extend flex-wrap-column
+
+.flex-wrap-reversed-column
+    @extend flex-wrap-reversed-column
+
+
+
+
