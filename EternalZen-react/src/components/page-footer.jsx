@@ -36,7 +36,7 @@ function footer()
     return (
     <>
         <footer>
-            <Navigation arg = { footerNav } cls='flex-wrap-row' />
+            <Navigation arg = { footerNav } cls='flex-wrap-row-justify-space-evenly' />
         </footer>
     </>)
 }
