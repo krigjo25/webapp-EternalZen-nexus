@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 
 //  Importing components
 import RegistrationFrom from '../components/form/form';
+
 import Navigation from '../components/navigation/navigation';
 
 export default function Registration() 
@@ -67,6 +68,8 @@ export default function Registration()
                     },
                 ],
         });
+
+
     //  Function to handle the form data
     const mapData =
     {

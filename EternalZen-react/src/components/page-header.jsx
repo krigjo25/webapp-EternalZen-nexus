@@ -259,6 +259,7 @@ function affirmation()
 function authorizationForm()
 {
     const data = {
+        link : '/',
         userAuthoricate : true
     }
     
