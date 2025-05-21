@@ -4,10 +4,6 @@
 			"name": "webapp-EternalZen-nexus",
 			"path": "."
 		},
-		{
-			"name": "prototype",
-			"path": "../prototype"
-		}
 	],
 	"settings": {}
 }
