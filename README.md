@@ -13,7 +13,6 @@ A preview of the project can be accessed at [Screen Dump](/lib/documents/spiritu
 [Screen capture](./prototype/documents/Eternal%20Zen.pdf) The Screen capture of the project
 
 ### Prototype
-
 [The Prototype](./prototype/index.html) Which illustrates the web application using MVC
 
 
