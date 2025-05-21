@@ -8,6 +8,15 @@ The assignment can be accessed at [spiritual-Growth.pdf](/lib/documents/spiritua
 A preview of the project can be accessed at [Screen Dump](/lib/documents/spiritual-Growth-screen-dump.pdf)
 ~~A demonstrationof the application can be accessed at [youtube]()~~.
 
+## Overview
+[Assignment](./prototype/documents/spiritual-Growth.pdf) The Assignment for the project
+[Screen capture](./prototype/documents/Eternal%20Zen.pdf) The Screen capture of the project
+
+### Prototype
+
+[The Prototype](./prototype/index.html) Which illustrates the web application using MVC
+
+
 ## Installation
 1. Clone the repository:
 ```sh
