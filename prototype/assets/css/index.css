@@ -1,0 +1,107 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+flex-row, .flex-row, .flex-justify-space-between-align-items-center {
+  display: flex;
+  flex-direction: row;
+}
+
+flex-wrap-row, .flex-wrap-row, .flex-wrap-row-align-items-end, .flex-wrap-row-justify-space-evenly-algin-items-center, .flex-wrap-row-justify-center, .flex-wrap-row-justify-space-around, .flex-wrap-row-justify-space-between, .flex-wrap-row-justify-space-evenly {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+flex-wrap-reversed-row, .flex-wrap-reversed-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+.flex-wrap-row-justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-justify-space-between-align-items-center {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-wrap-row-justify-space-between {
+  justify-content: space-between;
+}
+
+.flex-wrap-row-justify-space-around {
+  justify-content: space-around;
+}
+
+.flex-wrap-row-justify-center {
+  justify-content: center;
+}
+
+.flex-wrap-row-justify-space-evenly-algin-items-center {
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.flex-wrap-row-align-items-end {
+  align-items: flex-end;
+}
+
+flex-column, .flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+flex-wrap-column, .flex-wrap-column, .flex-wrap-column-justify-center, .flex-wrap-column-align-items-center, .flex-wrap-column-align-content-center {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+flex-wrap-reversed-column, .flex-wrap-reversed-column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
+.flex-wrap-column-align-content-center {
+  align-content: center;
+}
+
+.flex-wrap-column-align-items-center {
+  align-items: center;
+}
+
+.flex-wrap-column-justify-center {
+  justify-content: center;
+}
+
+flex-box, .flex-justify-center, .flex-align-items-flex-end-justify-center, .flex-box-space-between {
+  display: flex;
+}
+
+flex-box-align-items-center, .flex-align-items-center-justify-content-space-between {
+  display: flex;
+  align-items: center;
+}
+
+.flex-box-space-between {
+  justify-content: space-between;
+}
+
+.flex-align-items-flex-end-justify-center {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.flex-align-items-center-justify-content-space-between {
+  justify-content: space-between;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+  writing-mode: horizontal-tb;
+}/*# sourceMappingURL=index.css.map */
