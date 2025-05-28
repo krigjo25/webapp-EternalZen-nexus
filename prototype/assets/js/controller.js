@@ -16,20 +16,21 @@ function navigateRoute(route)
 function updateView()
 {
     let html;
-    const page = model.app.currentPage;
     const route = model.app.currentRoute;
 
-    if (route == "index")
+    switch (route)
     {
-        switch (page)
-        {
-            case "index" :
-                // code for index page
-                html = indexView();
+        case "index" :
+            // code for index route
+            html = indexView();
+            break;
 
-                break;
-        }
+        default:
+            console.error(route + "not found | Default");
+            break;
     }
-    document.querySelector("#header").innerHTML = headerView();
+
+    
     document.querySelector("#root").innerHTML = html;
+    document.querySelector("#header").innerHTML = headerView();
 }
