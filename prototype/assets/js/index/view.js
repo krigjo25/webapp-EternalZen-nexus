@@ -1,84 +1,65 @@
 function indexView()
 {
-    //!  TODO Present the view in a more readable way
-    const page = model.app.currentPage;
-    let navigation =
-    [
-        {
-            
-            type: "btn",
-            link: "#about",
-            name: "What is meditation?",
-            function:renderIndexContent(),
-        },
-        {
-            type: "btn",
-            link: "#wia",
-            name: "What is Affirmation?",
-            function: renderWIAContent(),
-        },
-    ]
+    let html = "";
+    const routes = model.data.routes[0];
 
-    const html = `
+    html = /*HTML*/`
     <main>
-        ${renderNavigation(navigation)}
-        <article id="content">
-        ${renderContent(page)}
+        ${renderNavigation(routes.nav)}
+        <article class="content flex-wrap-row">
+            ${renderContent(model.app.currentPage)}
         </article>
         <aside>
-        ${renderTip()}
+            ${renderTip()}
         </aside>
     </main>`;
 
     return html; 
 }
 
-function renderContent(view)
+
+
+function wimContent()
 {
-    const route = model.app.currentRoute;
-
-    if (route == "index")
-    {
-        switch (view)
-        {
-            case "index" :
-                // code for index page
-                return renderIndexContent();
-
-            case "about" :
-                return renderAboutContent();
-
-                case "WIA" :
-                return renderWIAContent();
-
-            default:
-                console.error(view + " not found");
-                return "";
-        }
-    }
-    
-    //!  TODO : Create a content component
-    let html = ``;
+    let html = /*HTML*/`
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Duis egestas quam ut velit sagittis aliquam. Fusce aliquam
+        erat leo, in posuere tellus ultrices at. 
+        Nunc egestas ligulavitae ante semper, sit amet sollicitudin tortor molestie. 
+        Donec a ante egestas, consequat arcu at, fringilla lacus.
+        Donec fringilla risus eu ipsum interdum venenatis.
+        Nulla pharetra orci dolor, et vestibulum odio viverra sit amet.
+        Morbi tempus nibh nec imperdiet dictum.</p>`;
     return html;
 }
 
-function renderIndexContent()
+function aboutContent()
 {
-    //!  TODO : Create a content component
-    let html = ``;
+
+    let html = /*HTML*/`
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Duis egestas quam ut velit sagittis aliquam. Fusce aliquam
+        erat leo, in posuere tellus ultrices at. 
+        Nunc egestas ligulavitae ante semper, sit amet sollicitudin tortor molestie. 
+        Donec a ante egestas, consequat arcu at, fringilla lacus.
+        Donec fringilla risus eu ipsum interdum venenatis.
+        Nulla pharetra orci dolor, et vestibulum odio viverra sit amet.
+        Morbi tempus nibh nec imperdiet dictum.</p>`;
     return html;
 }
 
-function renderAboutContent()
+function wiaContent()
 {
-    //!  TODO : Create a content component
-    let html = ``;
-    return html;
-}
-function renderWIAContent()
-{
-    //!  TODO : Create a content component
-    let html = ``;
+    let html = /*HTML*/`
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Duis egestas quam ut velit sagittis aliquam. Fusce aliquam
+        erat leo, in posuere tellus ultrices at. 
+        Nunc egestas ligulavitae ante semper, sit amet sollicitudin tortor molestie. 
+        Donec a ante egestas, consequat arcu at, fringilla lacus.
+        Donec fringilla risus eu ipsum interdum venenatis.
+        Nulla pharetra orci dolor, et vestibulum odio viverra sit amet.
+        Morbi tempus nibh nec imperdiet dictum.</p>`;
     return html;
 }
 

@@ -17,7 +17,7 @@ function headerView()
     let html = /*HTML*/`
     ${logoView()}
     <h1>${model.app.name}</h1>
-    ${renderNavigation(navigation)}`;
+    ${renderNavigation(model.header.nav)}`;
 
     return html;
 }
@@ -26,23 +26,23 @@ function logoView()
 {
     let html = `
     <div class="EZ-logo">
-        <img src="${model.app.logo.src}" alt="${model.app.logo.alt}">
+        <img src="${model.header.logo.src}" alt="${model.header.logo.alt}">
     </div>`;
     return html;
 }
 
 function renderNavigation(navBar)
 {
-    let html = "<nav>";
+    let html = /*HTML*/ `<nav class = "${navBar.cls}">`;
+    let nav = navBar.links;
 
-    console.log(navBar);
-    for (let i = 0; i < navBar.length; i++)
+    for (let i = 0; i < nav.length; i++)
     {
-        let navItem = navBar[i];
+        let navItem = nav[i];
         
         if (navItem.type == "btn")
         {
-            html += `<button onclick="navigateView('${navItem.link}')">${navItem.name}</button>`;
+            html += `<button onclick="${navItem.function}">${navItem.name}</button>`;
         }
         else if (navItem.type == "link")
         {
@@ -57,4 +57,19 @@ function renderNavigation(navBar)
     html += "</nav>";
     
     return html;
+}
+
+function renderView(view)
+{
+    switch (view)
+    {
+        
+        case "wia": return wia();
+        case "login": return loginView();
+        case "about": return aboutView();
+
+        default:
+            console.error("Unknown view: " + view);
+            return "";
+    }
 }
