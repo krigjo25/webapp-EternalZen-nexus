@@ -33,4 +33,5 @@ function updateView()
     
     document.querySelector("#root").innerHTML = html;
     document.querySelector("#header").innerHTML = headerView();
+    document.querySelector("#footer").innerHTML = footerView();
 }

@@ -1,18 +1,5 @@
 function headerView()
 {
-    let navigation =
-    [
-        {
-            type: "link",
-            name: "Login",
-            link: "#login",
-        },
-        {
-            type: "link",
-            link: "#login",
-            name: "Register",  
-        }
-    ]
 
     let html = /*HTML*/`
     ${logoView()}
@@ -22,6 +9,12 @@ function headerView()
     return html;
 }
 
+function footerView()
+{
+    let html = /*HTML*/`${renderNavigation(model.footer.nav)}`;
+
+    return html;
+}
 function logoView()
 {
     let html = `

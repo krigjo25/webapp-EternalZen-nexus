@@ -19,7 +19,7 @@ let model = {
         },
         nav:
         {
-            cls: "flex-wrap-row",
+            cls: "auth-content flex-wrap-row-justify-space-between",
             links:
             [
                 {
@@ -31,6 +31,31 @@ let model = {
                     type: "link",
                     name: "Register", 
                     link: "#register",
+                },
+            ],
+        },
+    },
+    footer:
+    {
+        nav:
+        {
+            cls: "flex-wrap-row-justify-space-between",
+            links:
+            [
+                {
+                    type: "link",
+                    name: "Privacy Policy",
+                    href: "www.google.com",
+                },
+                {
+                    type: "link",
+                    name: "Terms of Service",
+                    href: "www.google.com",
+                },
+                {
+                    type: "btn",
+                    name: "Contact Us",
+                    function: "contactView();",
                 },
             ],
         },

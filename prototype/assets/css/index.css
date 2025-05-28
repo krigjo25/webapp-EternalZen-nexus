@@ -101,6 +101,10 @@ flex-box-align-items-center, .flex-align-items-center-justify-content-space-betw
   justify-content: center;
 }
 
+.auth-content {
+  inline-size: 7em;
+}
+
 * {
   box-sizing: border-box;
   writing-mode: horizontal-tb;
