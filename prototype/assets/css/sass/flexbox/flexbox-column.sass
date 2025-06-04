@@ -12,15 +12,21 @@ flex-wrap-reversed-column
     flex-wrap: wrap
     flex-direction: column-reverse
 
-.flex-wrap-column-align-content-center
-    align-content: center
+
+.flex-wrap-column-justify-center
+    justify-content: center
     @extend flex-wrap-column
 
 .flex-wrap-column-align-items-center
     align-items: center
     @extend flex-wrap-column
 
-.flex-wrap-column-justify-center
-    justify-content: center
+.flex-wrap-column-align-content-center
+    align-content: center
     @extend flex-wrap-column
+
+.flex-wrap-column-justify-space-between
+    @extend flex-wrap-column
+    justify-content: space-between
+    
     

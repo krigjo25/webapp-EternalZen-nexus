@@ -1,4 +1,3 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 flex-row, .flex-row, .flex-justify-space-between-align-items-center {
   display: flex;
   flex-direction: row;
@@ -51,7 +50,7 @@ flex-column, .flex-column {
   flex-direction: column;
 }
 
-flex-wrap-column, .flex-wrap-column, .flex-wrap-column-justify-center, .flex-wrap-column-align-items-center, .flex-wrap-column-align-content-center {
+flex-wrap-column, .flex-wrap-column, .flex-wrap-column-justify-space-between, .flex-wrap-column-align-content-center, .flex-wrap-column-align-items-center, .flex-wrap-column-justify-center {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -63,16 +62,20 @@ flex-wrap-reversed-column, .flex-wrap-reversed-column {
   flex-direction: column-reverse;
 }
 
-.flex-wrap-column-align-content-center {
-  align-content: center;
+.flex-wrap-column-justify-center {
+  justify-content: center;
 }
 
 .flex-wrap-column-align-items-center {
   align-items: center;
 }
 
-.flex-wrap-column-justify-center {
-  justify-content: center;
+.flex-wrap-column-align-content-center {
+  align-content: center;
+}
+
+.flex-wrap-column-justify-space-between {
+  justify-content: space-between;
 }
 
 flex-box, .flex-justify-center, .flex-align-items-flex-end-justify-center, .flex-box-space-between {
@@ -108,4 +111,19 @@ flex-box-align-items-center, .flex-align-items-center-justify-content-space-betw
 * {
   box-sizing: border-box;
   writing-mode: horizontal-tb;
+}
+
+html, body {
+  block-size: 100%;
+}
+html .content, body .content {
+  inline-size: 43em;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+.quote {
+  inline-size: 15em;
 }/*# sourceMappingURL=index.css.map */
