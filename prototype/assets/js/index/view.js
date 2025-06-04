@@ -2,17 +2,15 @@ function indexView()
 {
     let html = "";
     const routes = model.data.routes[0];
+    const quote = model.data.misc.quote;
 
     html = /*HTML*/`
-    <main>
-        ${renderNavigation(routes.nav)}
         <article class="content flex-wrap-row">
             ${renderContent(model.app.currentPage)}
         </article>
-        <aside>
+        <aside class="${quote.cls}">
             ${renderTip()}
-        </aside>
-    </main>`;
+        </aside>`;
 
     return html; 
 }
@@ -66,6 +64,19 @@ function wiaContent()
 function renderTip()
 {
     //!  TODO : Create a tip component
-    let html = ``;
+    todaysQuote();
+    const quote = model.data.misc.quote;
+
+    let html = `
+    <h2>${quote.title}</h2>
+    <p>${quote.todaysQuote}</p>`;
     return html;
+}
+
+function todaysQuote()
+{
+    const quote = model.data.misc.quote;
+    const n = Math.round(Math.random(quote.content.length));
+
+    model.data.misc.quote.todaysQuote = quote.content[n];
 }

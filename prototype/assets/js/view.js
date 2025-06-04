@@ -1,10 +1,16 @@
 function headerView()
 {
 
+    const routes = model.data.routes[0];
+    
     let html = /*HTML*/`
-    ${logoView()}
-    <h1>${model.app.name}</h1>
-    ${renderNavigation(model.header.nav)}`;
+    <div class="flex-align-items-center-justify-content-space-between">
+
+        ${logoView()}
+        <h1>${model.app.name}</h1>
+        ${renderNavigation(model.header.nav)}
+    </div>
+    ${renderNavigation(routes.nav)}`;
 
     return html;
 }
@@ -15,6 +21,7 @@ function footerView()
 
     return html;
 }
+
 function logoView()
 {
     let html = `
@@ -56,7 +63,6 @@ function renderView(view)
 {
     switch (view)
     {
-        
         case "wia": return wia();
         case "login": return loginView();
         case "about": return aboutView();
