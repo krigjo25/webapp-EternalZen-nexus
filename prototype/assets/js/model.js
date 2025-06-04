@@ -39,7 +39,7 @@ let model = {
     {
         nav:
         {
-            cls: "flex-wrap-row-justify-space-between",
+            cls: "flex-wrap-row-justify-space-around",
             links:
             [
                 {
@@ -63,6 +63,109 @@ let model = {
 
     data:
     {
+        schemas:
+        {
+            contactUs:
+            {
+                name: "contactUs",
+                fields:
+                [
+                    {
+                        name: "name",
+                        type: "text",
+                        required: true,
+                    },
+                    {
+                        name: "email",
+                        type: "email",
+                        required: true,
+                    },
+                    {
+                        name: "message",
+                        type: "textarea",
+                        required: true,
+                    },
+                ],
+            },
+            register:
+            {
+                name: "register",
+                fields:
+                [
+                    {
+                        name: "username",
+                        type: "text",
+                        required: true,
+                    },
+                    {
+                        name: "email",
+                        type: "text",
+                        required: true,
+                    },
+                    {
+                        name: "password",
+                        required: true,
+                    },
+                    {
+                        name: "confirmPassword",
+                        type: "password",
+                        required: true,
+                    },
+                ],
+            },
+            login:
+            {
+                name: "login",
+                fields:
+                [
+                    {
+                        name: "username",
+                        type: "text",
+                        required: true,
+                    },
+                    {
+                        name: "password",
+                        type: "password",
+                        required: true,
+                    },
+                ],
+            },
+
+            journalEntry:
+            {
+                name: "journal-Entry",
+                fields:
+                [
+                    {
+                        name: "title",
+                        type: "text",
+                        required: true,
+                    },
+                    {
+                        name: "content",
+                        type: "textarea",
+                        required: true,
+                    },
+                    {
+                        name: "date",
+                        type: "date",
+                        todaysDate: Date.now(),
+                    },
+                ],
+            },
+            search:
+            {
+                name: "search",
+                fields:
+                [
+                    {
+                        name: "query",
+                        type: "text",
+                        required: true,
+                    },
+                ]
+            },
+        },
         routes:
         [
             {
@@ -121,6 +224,43 @@ let model = {
             }
         ],
         user:
-        []
+        [],
+        misc:
+        {
+            quote : 
+            {
+                cls: "quote",
+                title: "Today's Quote",
+                todaysQuote: "",
+                content: 
+                [
+                    `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas in molestie justo, nec ultricies turpis.
+                    Aenean scelerisque non dolor non sollicitudin.Morbi finibus
+                    dui eu gravida consequat. Integer orci purus, accumsan in
+                    maximus vel, tempor quis est. Sed efficitur massa at nulla
+                    vulputate, at cursus elit congue. Morbi mollis eget magna ut
+                    molestie. Suspendisse auctor, justo in bibendum aliquet,
+                    arcu justo porttitor ipsum, sit amet posuere libero nunc ut
+                    leo. Donec porta sem tellus. Integer rhoncus neque sit amet
+                    purus mollis imperdiet. Etiam ullamcorper ipsum lacus, quis
+                    scelerisque est vestibulum vel. Ut luctus nisl libero, vitae
+                    dictum purus efficitur in. Duis pharetra lorem a arcu venenatis
+                    placerat. Integer in sem ornare, posuere nulla et, tincidunt
+                    sapien. Nullam vestibulum, sem vel vulputate sodales, lectus
+                    elit vulputate mauris, eu suscipit magna diam vel urna.`,
+
+                    `Integer felis felis, mattis at dignissim et, lacinia scelerisque
+                    felis. Donec nec est at est ornare dictum. Vivamus eros odio,
+                    semper at quam vitae, pretium fringilla magna. Proin quis neque
+                    tristique, sodales mi sed, dapibus enim. Proin mauris arcu, tempor
+                    sed augue at, gravida tincidunt ligula. Suspendisse ut elit a justo
+                    ultrices suscipit sit amet sed mi. Aenean justo elit, fringilla
+                    fermentum purus a, pretium iaculis purus. Maecenas faucibus quam
+                    vitae molestie rutrum.`,
+                ],
+
+            },
+        },
     }
-}
+};
