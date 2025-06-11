@@ -203,21 +203,26 @@ let model = {
                     {
                         id: 0,
                         name: "index",
+                        type: "Button",
                     },
                     {
                         id: 1,
                         name: "about",
+                        type: "Button",
                     },
                     {
                         id: 2,
                         name: "WIA",
+                        type: "Button",
                     },
                     {
                         id: 3,
+                        type: "link",
                         name: "login",
                     },
                     {
                         id: 4,
+                        type: "link",
                         name: "register",
                     },
                 ]
