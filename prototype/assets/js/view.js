@@ -2,13 +2,15 @@ function headerView()
 {
 
     const routes = model.data.routes[0];
+    const header = model.header;
     
     let html = /*HTML*/`
     <div class="flex-align-items-center-justify-content-space-between">
 
         ${logoView()}
         <h1>${model.app.name}</h1>
-        ${renderNavigation(model.header.nav)}
+        <h2>${header.tagline}</h2>
+        ${renderNavigation(header.nav)}
     </div>
     ${renderNavigation(routes.nav)}`;
 
