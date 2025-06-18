@@ -10,8 +10,7 @@ let model = {
     },
     header:
     {
-        title: this.app,
-        subtitle: "Your personal meditation and affirmation app",
+        tagline: "Your personal meditation and affirmation app",
         logo: 
         {
             src: "assets/images/logo.png",
