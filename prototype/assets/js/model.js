@@ -23,12 +23,12 @@ let model = {
             links:
             [
                 {
-                    type: "link",
+                    type: "btn",
                     name: "Login",
                     link: "#login",
                 },
                 {
-                    type: "link",
+                    type: "btn",
                     name: "Register", 
                     link: "#register",
                 },
