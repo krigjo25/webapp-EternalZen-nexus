@@ -77,7 +77,7 @@ let model = {
                     },
                     {
                         name: "email",
-                        type: "email",
+                        type: "text",
                         required: true,
                     },
                     {
@@ -93,23 +93,24 @@ let model = {
                 fields:
                 [
                     {
+                        type: "text",
+                        required: true,
                         name: "username",
-                        type: "text",
-                        required: true,
                     },
                     {
+                        type: "text",
                         name: "email",
-                        type: "text",
                         required: true,
                     },
                     {
-                        name: "password",
                         required: true,
-                    },
-                    {
-                        name: "confirmPassword",
                         type: "password",
+                        name: "passcode",
+                    },
+                    {
                         required: true,
+                        type: "password",
+                        name: "confirmPassCode",
                     },
                 ],
             },
@@ -228,8 +229,27 @@ let model = {
                 ]
             }
         ],
-        user:
-        [],
+        users:
+        [
+            {
+                id: 0,
+                name: "",
+                
+                image: "",
+                role: "user",
+                passcode: "",
+                bio: "This is a test user profile.",
+
+                username: "testuser",
+                email: "testuser@example.com",
+                
+                isActive: false,
+                isDeleted: false,
+                displayName: false,
+                isDeactivated: false,
+                createdAt: Date.now(),
+            }
+        ],
         misc:
         {
             quote : 
