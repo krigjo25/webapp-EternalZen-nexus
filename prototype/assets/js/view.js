@@ -31,14 +31,15 @@ function logoView()
     return html;
 }
 
-function renderNavigation(navBar)
+function renderNavigation(nav)
 {
-    let html = /*HTML*/ `<nav class = "${navBar.cls}">`;
-    let nav = navBar.links;
+    let html = /*HTML*/ `<nav class = "${nav.cls}">`;
+    let btn = nav.links;
+    console.log("Rendering navigation with items:", btn);
 
-    for (let i = 0; i < nav.length; i++)
+    for (let i = 0; i < btn.length; i++)
     {
-        let navItem = nav[i];
+        let navItem = btn[i];
         
         if (navItem.type == "btn")
         {
