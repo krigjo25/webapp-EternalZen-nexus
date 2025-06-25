@@ -38,13 +38,33 @@ function updateView()
 function generateForm(id)
 {
     console.log("Generating form for id:", id);
-    const form = model.forms[id];
-    const inputs = form.inputs;
+    const form = model.data.schemas[id];
+    const inputs = form.fields;
+    const btn = form.btn;
+    const n = inputs.length;
+    let html;
 
-    let html = /*HTML*/ `
-        <form onsubmit="handleLogin(event)" method="${form.method}" class="${form.cls}">`;
+    switch (form.name)
+    {
+        case "register":
+            //  Generate register form
+            html = /*HTML*/ `
+            <form onsubmit="handleRegister(event)" method="${form.method}" class="${form.cls}">`;
+            break;
 
-    for (let i = 0; i < inputs.length; i++)
+        case "login":
+            //  Generate login form
+            html = /*HTML*/ `
+            <form onsubmit="handleLogin(event)" method="${form.method}" class="${form.cls}">`;
+            break;
+
+        default:
+            html = /*HTML*/ `
+            <form method="${form.method}" class="${form.cls }">`;
+            break;
+    }
+    
+    for (let i = 0; i < n; i++)
     {
         const input = inputs[i];
 
@@ -54,7 +74,7 @@ function generateForm(id)
                 
     }
     html += /*HTML*/ `
-    <button type="${form.btn.type}" class="${form.btn.cls}">${form.btn.name}</button>
+    <button type="${btn.type}" class="${btn.cls}">${btn.name}</button>
     </form>`;
     return html;
 
