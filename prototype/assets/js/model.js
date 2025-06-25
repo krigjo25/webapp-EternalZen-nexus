@@ -63,10 +63,42 @@ let model = {
     data:
     {
         schemas:
-        {
-            contactUs:
+        [
             {
-                name: "contactUs",
+                id: 0,
+                name: "login-form",
+
+                btn:
+                {
+                    type: "submit",
+                    name: "Login",
+                    cls: "btn btn-primary",
+                },
+                fields:
+                [
+                    {
+                        name: "username",
+                        type: "text",
+                        required: true,
+                    },
+                    {
+                        name: "password",
+                        type: "password",
+                        required: true,
+                    },
+                ],
+            },
+            {
+                id: 1,
+                name: "contact-form",
+
+                btn:
+                {
+                    type: "submit",
+                    name: "Login",
+                    cls: "btn btn-primary",
+                },
+
                 fields:
                 [
                     {
@@ -86,9 +118,17 @@ let model = {
                     },
                 ],
             },
-            register:
             {
-                name: "register",
+                id: 2,
+                name: "register-form",
+
+                btn:
+                {
+                    type: "submit",
+                    name: "Login",
+                    cls: "btn btn-primary",
+                },
+
                 fields:
                 [
                     {
@@ -113,27 +153,17 @@ let model = {
                     },
                 ],
             },
-            login:
             {
-                name: "login",
-                fields:
-                [
-                    {
-                        name: "username",
-                        type: "text",
-                        required: true,
-                    },
-                    {
-                        name: "password",
-                        type: "password",
-                        required: true,
-                    },
-                ],
-            },
-
-            journalEntry:
-            {
+                id: 3,
                 name: "journal-Entry",
+
+                btn:
+                {
+                    type: "submit",
+                    name: "Login",
+                    cls: "btn btn-primary",
+                },
+
                 fields:
                 [
                     {
@@ -153,9 +183,17 @@ let model = {
                     },
                 ],
             },
-            search:
             {
+                id: 4,
                 name: "search",
+
+                btn:
+                {
+                    type: "submit",
+                    name: "Search",
+                    cls: "btn btn-primary",
+                },
+
                 fields:
                 [
                     {
@@ -165,7 +203,8 @@ let model = {
                     },
                 ]
             },
-        },
+        ],
+
         routes:
         [
             {
